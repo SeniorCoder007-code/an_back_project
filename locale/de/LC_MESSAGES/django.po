@@ -1,0 +1,802 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-23 01:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blog/templates/blog_main.html:15 blog/templates/footer.html:102
+#: mixer/templates/footer.html:50 mixer/templates/footer.html:113
+#: mixer/templates/footer.html:178
+msgid "Blog"
+msgstr ""
+
+#: blog/templates/footer.html:99
+msgid "Why Mix"
+msgstr "Warum Reinigen?"
+
+#: blog/templates/footer.html:100 mixer/templates/footer.html:47
+#: mixer/templates/footer.html:104 mixer/templates/footer.html:176
+#: mixer/templates/index.html:67
+msgid "Features"
+msgstr "Features"
+
+#: blog/templates/footer.html:101 mixer/templates/footer.html:49
+#: mixer/templates/footer.html:110 mixer/templates/footer.html:177
+msgid "FAQ"
+msgstr ""
+
+#: blog/templates/footer.html:103 mixer/templates/contact.html:11
+#: mixer/templates/footer.html:51 mixer/templates/footer.html:116
+#: mixer/templates/footer.html:179
+msgid "Contact"
+msgstr "Kontakt"
+
+#: blog/templates/footer.html:104
+msgid "Start Session"
+msgstr "Überprüfen"
+
+#: blog/templates/footer.html:105
+msgid "Check Session"
+msgstr "Überprüfen"
+
+#: mixer/templates/contact.html:13
+msgid "Something not working? Use this form to contact Anonymix support."
+msgstr ""
+"Etwas nicht funktioniert? Verwenden Sie dieses Formular, um den Anonymix-"
+"Support zu kontaktieren."
+
+#: mixer/templates/contact.html:18
+msgid "We have received your message and will respond shortly."
+msgstr ""
+"Wir haben Deine Nachricht erhalten und wir werden uns schnellstmöglich bei "
+"Dir melden."
+
+#: mixer/templates/contact.html:20
+msgid "Message sending failed"
+msgstr "Nachricht senden fehlgeschlagen"
+
+#: mixer/templates/contact.html:31
+msgid "Subject"
+msgstr "Gegenstand"
+
+#: mixer/templates/contact.html:35
+#, fuzzy
+#| msgid "Your Mix ID:"
+msgid "Mix ID"
+msgstr "Deine Mix ID:"
+
+#: mixer/templates/contact.html:39
+msgid "Write message here"
+msgstr "Nachricht hier schreiben"
+
+#: mixer/templates/contact.html:43
+msgid "Send"
+msgstr "Jetzt senden"
+
+#: mixer/templates/contact.html:55
+msgid ""
+"This is the Anonymix public PGP key. It can be used to verify the "
+"authenticity of messages signed by us or to encrypt messages you send to us."
+msgstr ""
+"Dies ist der öffentliche PGP-Schlüssel von Anonymix. Es kann verwendet "
+"werden, um die Authentizität von Nachrichten zu überprüfen, die von uns "
+"signiert wurden, oder um Nachrichten zu verschlüsseln, die Sie an uns senden."
+
+#: mixer/templates/delete.html:14
+msgid "Delete Mix"
+msgstr "Session löschen"
+
+#: mixer/templates/delete.html:17
+msgid "Delete your mix?"
+msgstr "Session löschen"
+
+#: mixer/templates/delete.html:18
+msgid "This cannot be undone"
+msgstr ""
+
+#: mixer/templates/delete.html:28
+msgid "Delete"
+msgstr "Löschen"
+
+#: mixer/templates/faq.html:11
+msgid "Frequently Asked Questions"
+msgstr "Häufig gestellte Fragen"
+
+#: mixer/templates/faq.html:16
+msgid "When should I use a bitcoin mixer?"
+msgstr "Wann bekomme ich meine gereinigten Bitcoins?"
+
+#: mixer/templates/faq.html:17
+msgid ""
+"Use a mixer whenever you have bitcoins that could be connected to your "
+"identity or a transaction you don't want to be associated with. "
+"Realistically, this means any bitcoins you receive from someone else, since "
+"you don't know what they've been up to."
+msgstr ""
+"Benutze einen Bitcoin Mixer immer dann wenn Du Bitcoins hast, die mit Deiner "
+"Identität in Verbindung gebracht werden können oder wenn Du eine anonyme "
+"Transaktion machen möchtest."
+
+#: mixer/templates/faq.html:23
+msgid "How does it work?"
+msgstr "Wie funktioniert's?"
+
+#: mixer/templates/faq.html:24
+msgid ""
+"Anonymix is a tool to give you back control over your online anonymity. When "
+"you send us your bitcoins, we'll send you new ones to the wallet of your "
+"choice-- or even to several wallets. This ends the trail of any old wallets "
+"and coins, which may be associated with your identity and past transactions. "
+"Get a clean start on the blockchain by sending your mixed coins to a new "
+"wallet."
+msgstr ""
+"Anonymix ist ein Service der Dir die Kontrolle über Deine Anonymität im "
+"Internet zurückgibt. Sendest Du uns Bitcoins senden wir Dir neue Bitcoins an "
+"das Wallet Deiner Wahl – oder sogar an mehere Wallets Deiner Wahl. Das "
+"beendet die Spur Deiner Bitcoins die mit Deiner  Identität oder vergangenen "
+"Transaktionen assoziiert sein kann. Starte frisch auf der Blockchain indem "
+"Du Deine gemixten Bitcoins an ein neues Wallet sendest. "
+
+#: mixer/templates/faq.html:30
+msgid "What are your fees?"
+msgstr "Wie hoch sind die Gebühren?"
+
+#: mixer/templates/faq.html:32
+#, python-format
+msgid ""
+"We have two fees, a service fee and a transaction fee. The service fee is  "
+"%(ss)s%% and the\n"
+"                            transaction fee is %(tr)s BTC per payout address."
+msgstr ""
+
+#: mixer/templates/faq.html:38
+msgid "How long does the mixing process take?"
+msgstr "Wie lang dauert der Mixprozess?"
+
+#: mixer/templates/faq.html:40
+msgid ""
+"That depends on the settings you choose at the beginning of your mix. If you "
+"want your coins back quickly, choose 'Quick Mix' and receive clean coins "
+"after one confirmation. For extra anonymity, choose one of the delay\n"
+"                        options. The timer to release your coins will start "
+"after the transaction has 1 confirmation."
+msgstr ""
+"Das hängt von den Einstellungen ab die Du zu Beginn des Mixes gewählt hast. "
+"Wenn Du Deine Coins schnell zurückgesendet haben möchtest wähle "
+"'Schnellmix'. Dann senden wir Dir frische Bitcoins nach 1 Bestätigung "
+"zurück. Für zusätzliche Anonymität wähle eine der Verzögerungsoptionen. Die "
+"zusätzliche Zeit bis zur Auszahlung beginnt, wenn Deine Einzahlung 1 "
+"Bestätigung hat. "
+
+#: mixer/templates/faq.html:46
+msgid "Does Anonymix keep logs?"
+msgstr "Behält Bitcoin Laundry Transaktionsinformationen?"
+
+#: mixer/templates/faq.html:47
+msgid ""
+"At Anonymix, you have the option to delete all records of your mix right "
+"away. If you don't choose to delete your mix from our records right away, we "
+"keep logs for seven days to provide customer support. After seven days all "
+"logs are deleted automatically. Please note that if you have deleted your "
+"mix our User Support team may be unable to assist you, so we highly "
+"recommend waiting until your mix has arrived at your receiving address "
+"before deleting it."
+msgstr ""
+"Bei Bitcoin Laundry hast Du die volle Kontrolle über die beim "
+"Reinigungsvorgang entstehenden Daten, die Du auch sofort selbstständig von "
+"unseren Servern löschen kannst. Wenn Du Dich dagegen entscheiden solltest "
+"Deine Daten selbst zu löschen, behalten wir die Logs für sieben Tage um Die "
+"bei Rückfragen zur Verfügung zu stehen. Nach sieben Tagen werden alle Daten "
+"automatisch von unseren Servern gelöscht. Bitte sei Dir darüber bewusst, "
+"dass wenn Du die Daten zum Reinigungsvorgang gelöscht hast unser "
+"Kundendienst  Dir keine Fragen mehr zu diesem Vorgang beantworten kann. "
+"Deswegen empfehlen wir dringend, die Daten erst zu löschen, wenn Du alle "
+"Bitcoins auf der Empfangsadressen(n) erhalten hast."
+
+#: mixer/templates/faq.html:53
+msgid "What happens if something goes wrong?"
+msgstr "Was passiert wenn etwas beim Reinigungsvorgang schief geht?"
+
+#: mixer/templates/faq.html:54
+msgid ""
+"If there's a problem with your mix or you think something isn't working the "
+"way it should, please use our support page to get in touch with the Anonymix "
+"user support. Our team is committed to making sure you have a top-notch "
+"experience with our service."
+msgstr ""
+"Wenn es ein Problem mit Deinem Reinigungsvorgang gibt, dann nimm bitte "
+"Kontakt mit unserem Bitcoin Laundry Kundendienst auf. Unser "
+"hochqualifiziertes Team wird sich um Deine Angelegenheit umgehend kümmern."
+
+#: mixer/templates/footer.html:45
+msgid "Home"
+msgstr ""
+
+#: mixer/templates/footer.html:46 mixer/templates/footer.html:101
+#: mixer/templates/footer.html:175
+msgid "Why Anonymix?"
+msgstr "Warum Anonymix?"
+
+#: mixer/templates/footer.html:48 mixer/templates/footer.html:107
+msgid "Key"
+msgstr ""
+
+#: mixer/templates/footer.html:52 mixer/templates/footer.html:119
+#: mixer/templates/footer.html:180 mixer/templates/index.html:38
+#: mixer/templates/new_mix_3.html:11 mixer/templates/new_mix_3.html:46
+#: mixer/templates/new_mix_3.html:112
+msgid "Begin Mix"
+msgstr "Mix starten"
+
+#: mixer/templates/footer.html:53 mixer/templates/footer.html:122
+#: mixer/templates/footer.html:181 mixer/templates/status.html:9
+#: mixer/templates/status.html:25
+msgid "Mix Info"
+msgstr ""
+
+#: mixer/templates/footer.html:201
+msgid "Donations"
+msgstr "Bestätigungen"
+
+#: mixer/templates/index.html:12 mixer/templates/index.html:28
+msgid "This is"
+msgstr "Das ist"
+
+#: mixer/templates/index.html:13 mixer/templates/index.html:29
+msgid "Anonymix"
+msgstr "Anonymix"
+
+#: mixer/templates/index.html:17 mixer/templates/index.html:33
+msgid "Bitcoins without a trace..."
+msgstr "Bitcoins ohne Spur"
+
+#: mixer/templates/index.html:52 mixer/templates/index.html:54
+msgid "How safe are your bitcoins?"
+msgstr "Wie sicher sind Deine Bitcoins?"
+
+#: mixer/templates/index.html:57
+msgid ""
+"You might think that your payments using bitcoin are completely anonymous "
+"and can never be connected to your real identity, but the truth is that "
+"bitcoin transactions can easily be traced on the blockchain. If you don't "
+"take extra steps to protect your privacy, it's possible for blockchain "
+"analysis firms or hackers to find out your transaction history, how much "
+"bitcoin you have, and even who you are. At Anonymix, we're committed to "
+"keeping your identity and financial information secure. Here's how it works: "
+"You send us bitcoin, and we send back new bitcoins to a new address that you "
+"control. This breaks any continuity on the blockchain between your old "
+"activity and your new coins, making it nearly impossible to follow the new "
+"trail. For extra anonymity, you can choose to delay your mixer payment, and "
+"send your new coins to more than one address."
+msgstr ""
+"Du denkst vielleicht, dass Deine Bitcoinzahlungen vollkommen anonym sind und "
+"das sie nicht mit Deiner Identität in Verbindung gebracht werden können. "
+"Aber die Wahrheit ist, dass Bitcointransaktionen leicht auf der Blockchain "
+"nachvollzogen werden können. Wenn Du nicht zusätzliche Schritte unternimmst "
+"um Deine Privatsphäre zu schützen, ist es für Firmen, die Blockchainanalyse "
+"betreiben oder auch für Hacker, möglich Deine Transaktionshistorie "
+"nachzuvollziehen, Deinen Bitcoinbestand festuzstellen oder auch Deine "
+"Identität herauszufinden. Anonymix stellt sicher, dass Deine Identität und "
+"Deine Finanzinformationen geschüzt sind. Und so funktioniert's: Du schickst "
+"uns Bitcoin und wir senden Dir neue Bitcoins an eine Adresse die Du "
+"kontrollierst. Dies bricht die Verbindung zwischen den alten und den neuen "
+"Bitcoins auf der Blockchain und macht es unmöglich der neuen Spur zu folgen. "
+"Um zusätzliche Anonymität kannst Du eine verzögerte Auszahlung Deiner "
+"Bitcoins wählen und die Bitcoins an mehr als eine Auszahlungsadresse zu "
+"senden. "
+
+#: mixer/templates/index.html:76
+msgid "Speed and Security"
+msgstr "Geschwindigkeit und Sicherheit"
+
+#: mixer/templates/index.html:77
+msgid ""
+"Choose 'Quick Mix' to receive your coins after one confirmation. For extra "
+"security, pick a timed or random delay to make your coins more difficult to "
+"trace."
+msgstr ""
+"Wähle 'Quick Mix' um Deine Coins nach einer Bestätigung zu erhalten. Für "
+"zusätzliche Sicherheit, wähle eine exakte oder zufällige Verzögerung der "
+"Auszahlung. Das macht die Nachvollziehbakeit der Transaktion noch "
+"schwieriger. "
+
+#: mixer/templates/index.html:85
+msgid "High Capacity"
+msgstr "Hohe Kapazität"
+
+#: mixer/templates/index.html:88
+#, python-format
+msgid ""
+"Due to our unique reserve that includes both hot and cold storage, we can "
+"handle mixes of up to %(max)s BTC."
+msgstr ""
+"Aufgrund unserer einzigartigen Reserve, die sowohl die Warm- als auch die "
+"Kaltlagerung umfasst, können wir Mischungen mit einem  von bis zu %(max)s "
+"BTC verarbeiten."
+
+#: mixer/templates/index.html:96
+msgid "The Chance to Win Bitcoin"
+msgstr "Deine Chance Bitcoins zu gewinnen"
+
+#: mixer/templates/index.html:97
+#, python-format
+msgid ""
+"Our exciting built-in raffle means you have the chance to win free BTC with "
+"every mix! Every %(num)sth mix wins a %(per)s%% bonus on the amount mixed. "
+"Mix with Anonymix every time to increase your chances! "
+msgstr ""
+"Unsere einzigartige und kostenlose Mix-Lotterien gibt Dir die Möglichkeit "
+"Bitcoins zu gewinnen! Jeder %(num)s. Mix gewinnt einen %(per)s%% Bonus auf "
+"den gemixten Betrag. Mixe alle Deine Coins mit Anonymix und erhöhe Deine "
+"Chancen!"
+
+#: mixer/templates/index.html:105
+msgid "Multiple Addresses"
+msgstr "Mehrere Adressen"
+
+#: mixer/templates/index.html:106
+msgid ""
+"Increase the security of your mix by making your deposit from multiple "
+"wallets, and sending your mixed funds to up to five receiving addresses."
+msgstr ""
+"Erhöhe die Sicherheit Deines Mixes, indem Du von mehreren Wallets einzahlst "
+"und die gemixten Coins an bis zu fünf Adressen auszahlen lässt. "
+
+#: mixer/templates/index.html:114
+msgid "Certificate of Origin"
+msgstr "Herkunftszertifikat"
+
+#: mixer/templates/index.html:115
+msgid ""
+"We issue a certificate of origin with every mix that guarantees the coins "
+"you receive came from Anonymix."
+msgstr ""
+"Mit jedem Mix stellen wir ein Herkunftszertifikat zur Verfügung. Das "
+"beweisst, dass Deine gemixten Coins von Anonymix stammen"
+
+#: mixer/templates/index.html:123
+msgid "No Logs"
+msgstr "Keine Logs"
+
+#: mixer/templates/index.html:124
+msgid ""
+"We offer the option to delete your mix immediately. If you don't delete your "
+"mix, we keep the details for one week in case you need to contact us. After "
+"one week all logs are automatically deleted."
+msgstr ""
+"Wir bieten Dir die Möglichkeit, Deinen Mix sofort zu löschen. Wenn Du Deinen "
+"Mix nicht sofort löschst, speichern wir die Details Deines Mixes für eine "
+"Woche falls Du uns für Rückfragen kontaktieren möchtest.Nach einer Woche "
+"löschen wir alle Logs automatisch."
+
+#: mixer/templates/mix_status.html:15
+msgid "Mix status:"
+msgstr "Reinigungsstatus"
+
+#: mixer/templates/mix_status.html:49
+msgid "Your Mix ID:"
+msgstr "Deine Mix ID:"
+
+#: mixer/templates/mix_status.html:50
+msgid ""
+"Save this number! This is the only identifier of your mix and you will use "
+"it to check the status of this session."
+msgstr ""
+"Speichere diese Nummer! Dies ist die einzige Identifikation des "
+"Reinigungsvorgangs und Du brauchst sie um den Status des Vorgangs zu prüfen."
+
+#: mixer/templates/mix_status.html:55
+#, python-format
+msgid "Do not send less than %(mn)s BTC"
+msgstr "Sende nicht weniger als %(mn)s BTC"
+
+#: mixer/templates/mix_status.html:58
+#, python-format
+msgid "Do not send more than %(mx)s BTC"
+msgstr "Sende nicht mehr als %(mx)s BTC"
+
+#: mixer/templates/mix_status.html:65
+msgid "Certificate of origin"
+msgstr "Herkunftszertifikat"
+
+#: mixer/templates/mix_status.html:66
+msgid ""
+"We issue a certificate of origin with every mix that guarantees the coins "
+"you receive came from Anonymix"
+msgstr ""
+"Mit jedem Mix stellen wir ein Herkunftszertifikat zur Verfügung. Das "
+"beweisst, dass Deine gemixten Coins von Anonymix stammen"
+
+#: mixer/templates/mix_status.html:81
+msgid "Deposit address:"
+msgstr "Einzahlungsadresse"
+
+#: mixer/templates/mix_status.html:91
+#, python-format
+msgid ""
+"This mix is valid for %(inact)s days. Send your coins to the deposit address "
+"within this time limit. Anonymix schedules the payment of your mixed coins "
+"once your deposit has %(confirmations)s\n"
+"                        confirmation. The arrival of your clean coins "
+"depends on your delay settings."
+msgstr ""
+"Deine Session ist für %(inact)s Stunden gültig. Bitte sende Deine Bitcoins "
+"innerhalb dieses Zeitraums an die Einzahlungsadresse. Wir werden die "
+"Auszahlung Deiner gereinigten Bitcoins veranlassen, sobald Deine Einzahlung "
+"<code> %(confirmations)s </code> Bestätigung hat. Der Zeitpunkt zu dem Deine "
+"gereinigten Bitcoins an Dich verschickt werden, hängt davon ab, ob Du zu "
+"Beginn des Vorgangs eine Auszahlungsverzögerung gewählt hast und wenn ja, "
+"wie groß sie ist."
+
+#: mixer/templates/mix_status.html:99
+msgid "Output address(es)"
+msgstr "Auszahlungsadresse"
+
+#: mixer/templates/mix_status.html:100
+msgid "Percentages"
+msgstr "prozente"
+
+#: mixer/templates/mix_status.html:101 mixer/templates/new_mix_3.html:38
+#: mixer/templates/new_mix_3.html:80
+msgid "Delay"
+msgstr "Verzögerung"
+
+#: mixer/templates/mix_status.html:115
+msgid "Your deposit payments"
+msgstr "Deine Einzahlungen"
+
+#: mixer/templates/mix_status.html:118
+msgid "Your incoming transactions will be shown here."
+msgstr "Deine eingehenden Transaktionen wird hier angezeigt."
+
+#: mixer/templates/mix_status.html:123
+msgid "Amount"
+msgstr "Betrag"
+
+#: mixer/templates/mix_status.html:123
+msgid "Confirmations"
+msgstr "Bestätigungen"
+
+#: mixer/templates/mix_status.html:123 mixer/templates/mix_status.html:139
+msgid "Transaction ID(s)"
+msgstr "Transaktions-ID(s)"
+
+#: mixer/templates/mix_status.html:129
+msgid "Mixed payout transactions"
+msgstr "Gemixte Ausgangstransaktionen"
+
+#: mixer/templates/mix_status.html:132
+msgid ""
+"Your transaction has been sent to Anonymix admin for approval due to high "
+"volume. Please check back later."
+msgstr ""
+"Aufgrund der Höhe des Betrags den Du gesendet hast, wird Deine Transaktion "
+"an den Administrator weitergeleitet. Bitte prüfe den Status des Vorgangs "
+"später."
+
+#: mixer/templates/mix_status.html:135
+#, python-format
+msgid "Mixed payout will be released after %(conf)s confirmation."
+msgstr "Die Auszahlung wird nach %(conf)s Bestätigungen versandt."
+
+#: mixer/templates/mix_status.html:139
+msgid "Amount Net:"
+msgstr "Nettobetrag"
+
+#: mixer/templates/mix_status.html:139
+msgid "Delay:"
+msgstr "Verzögerung"
+
+#: mixer/templates/mix_status.html:149
+msgid " Delete"
+msgstr "Löschen"
+
+#: mixer/templates/mix_status.html:152
+msgid ""
+"Click to delete all of your mix information from our servers.<br> Do not "
+"delete your mix information before you have receive your mixed bitcoin."
+msgstr ""
+"Dies löscht alle Informationen zu diesem Vorgang von unseren Servern. <br> "
+"Bitte lösche den Vorgang nicht, bevor die ausgehende Zahlung versandt wurde."
+
+#: mixer/templates/new_mix_3.html:31 mixer/templates/new_mix_3.html:32
+#: mixer/templates/new_mix_3.html:72
+msgid "Address"
+msgstr "Adresse"
+
+#: mixer/templates/new_mix_3.html:39 mixer/templates/new_mix_3.html:81
+msgid "Quick Mix"
+msgstr "Vorgang prüfen"
+
+#: mixer/templates/new_mix_3.html:52 mixer/templates/new_mix_3.html:96
+msgid "Add Address"
+msgstr "Adresse hinzufügen"
+
+#: mixer/templates/new_mix_3.html:58
+msgid ""
+"Please enter the address(es) you would like your mixed Bitcoins to be send "
+"to. For the fastest transaction, select 'Quick Mix' in the delay settings "
+"and you will receive mixed Bitcoins after one confirmation."
+msgstr ""
+"Bitte geben Sie die Adresse (n) ein, an die Sie gemischte Bitcoin senden "
+"möchten. Für die schnellste Transaktion wählen Sie \"Schnellmischen\" in den "
+"Verzögerungseinstellungen und Sie erhalten gemischte Münzen nach einer "
+"Bestätigung."
+
+#: mixer/templates/new_mix_3.html:102
+msgid "Remove Address"
+msgstr "Adresse entfernen"
+
+#: mixer/templates/status.html:11
+msgid "Use your <b>Mix ID</b> to come back and check the status of your mix"
+msgstr ""
+"Verwenden Sie Ihren <b> Mix ID-Code </ b>, um den Status Ihres Mixes zu "
+"überprüfen"
+
+#: mixer/templates/status.html:22
+msgid "Your Mix ID"
+msgstr "Deine Mix ID:"
+
+#~ msgid "Why Mix?"
+#~ msgstr "Warum Reinigen?"
+
+#~ msgid ""
+#~ "Did you know that Bitcoin transactions are not anonymous and can be "
+#~ "tracked?"
+#~ msgstr ""
+#~ "Wusstest Du, dass Bitcoin Transaktionen nicht anonym sind und "
+#~ "zurückverfolgt werden können?"
+
+#~ msgid ""
+#~ "Hiding your identity in this digital world can be tricky, and you might "
+#~ "be leaving behind several digital footprints without realizing. Bitcoin "
+#~ "Laundry is here to help you keep your bitcoin transactions anonymous and "
+#~ "private. When you start a mix with us, we exchange the bitcoins you send "
+#~ "us with coins from our reserve pool that can't be traced to your identity "
+#~ "or your previous transactions. To be extra safe we also offer options to "
+#~ "delay your payout and send it to multiple addresses. We keep our fees low "
+#~ "and reserve pools large to make sure we can always give you the best "
+#~ "possible service."
+#~ msgstr ""
+#~ "Es kann schwierig sein, in der digitalen Welt seine Identität zu "
+#~ "verstecken. Man kann seinen digitalen Fingerabdruck hinterlassen ohne es "
+#~ "zu merken. Mit Bitcoin Laundry machst Du Deine Bitcointransaktionen "
+#~ "anonym und privat."
+
+#~ msgid "Anonymous"
+#~ msgstr "Anonym"
+
+#~ msgid ""
+#~ "You'll never have to create an account to use our service. For extra "
+#~ "privacy protection, we recommend visiting us at our .onion address <a "
+#~ "href='http://:link'>:link</a>"
+#~ msgstr ""
+#~ "Du musst keinen Account eröffnen um den Service von Bitcoin Laundry "
+#~ "nutzen zu können. Für zusätzliche Sicherung Deiner Privatssphäre "
+#~ "empfehlen wir, den Service über die .onion Adresse <a href='http://:"
+#~ "link'>:link</a> zu nutzen."
+
+#~ msgid "Fast"
+#~ msgstr "Schnell"
+
+#~ msgid ""
+#~ "If you don't choose a random delay on your coins, they'll be sent out "
+#~ "after only 1 confirmation. If you want to make your coins even harder to "
+#~ "trace, you can opt for a delayed payout."
+#~ msgstr ""
+#~ "Wenn du keine zufällige Verzögerung der Auszahlung Deiner Bitcoins "
+#~ "wählst, werden sie nach 1 Bestätigung ausgezahlt. Wenn du es noch "
+#~ "schwieriger machen willst deine Bitcoins zurückzuverfolgen, dann wähle "
+#~ "eine zeitiche Verzögerung der Auszahlung."
+
+#~ msgid ""
+#~ "If you don't want any record of your mix, you can delete it right away. "
+#~ "If you choose not to delete it, we'll keep it for seven days to provide "
+#~ "customer support and then it will be deleted automatically."
+#~ msgstr ""
+#~ "Wenn Du sicherstellen willst das es keine Dokumentation Deines "
+#~ "Reinigungsvorgangs gibt kannst Du ihn direkt nach Abschluss des Vorgangs "
+#~ "löschen. Wenn Du dich nicht dafür entscheiden solltest, bewahren wir die "
+#~ "Transaktionsinformationen zu Deinem Reinigungsvorgang sieben Tage lang "
+#~ "auf, um bei Rückfragen Informationen an Dich geben zu können. Nach Ablauf "
+#~ "der sieben Tage werden alle Daten bezüglich des Reinigungsvorgangs dann "
+#~ "automatisch von unseren Servern gelöscht."
+
+#~ msgid ""
+#~ "You can send your coins to up to 5 addresses to increase your security "
+#~ "even more."
+#~ msgstr ""
+#~ "Um die Anonymität Deiner Bitcoins weiter zu erhöhen kannst Du die "
+#~ "Bitcoins an bis zu fünf Auszahlungsadressen schicken lassen."
+
+#~ msgid "Fair Price"
+#~ msgstr "Faire Preise"
+
+#, python-format
+#~ msgid ""
+#~ "We offer our services for the low fee of %(service)s of your mix plus "
+#~ "%(tr)s transaction fee per payout address."
+#~ msgstr ""
+#~ "Wir bieten unseren Service zu einer geringen Servicegebühr von "
+#~ "%(service)s %% of your mix zuzüglich %(tr)s Transaktionsgebühr pro "
+#~ "Auszahlungsadresse an."
+
+#~ msgid "Secure"
+#~ msgstr "Sicher"
+
+#~ msgid ""
+#~ "Your security and anonymity is our top priority. We make sure our servers "
+#~ "are protected against every type of attack, so you can use our service "
+#~ "with confidence."
+#~ msgstr ""
+#~ "Deine Sicherheit hat für uns höchste Priorität. Wir stellen sicher, dass "
+#~ "unsere Server gegen jedwede Form von Angriffen geschützt sind, damit Du "
+#~ "unseren Service beruhigt nutzen kannst."
+
+msgid "home"
+msgstr "Startseite"
+
+#~ msgid "Anonymix - Contact"
+#~ msgstr "Anonymix"
+
+#~ msgid ""
+#~ "We have two fees, a service fee, and a transaction fee of %(tr)s per "
+#~ "payout address. Our service fee is donation-based. Please support us so "
+#~ "we can make sure that we'll provide a good service to you now\n"
+#~ "                        and in future."
+#~ msgstr ""
+#~ "Wir haben zwei Gebühren; zum einen eine Servicegebühr und zum anderen "
+#~ "eine Transaktionsgebühr %(tr)s . Die Servicegebühr ist spendenbasiert. "
+#~ "Bitte unterstütze uns, so dass wir auch in Zukunft einen guten Service "
+#~ "anbieten können. "
+
+#~ msgid ""
+#~ "Please enter the address(es) where you would like to send mixed Bitcoin. "
+#~ "For the fastest transaction, select \\"
+#~ msgstr ""
+#~ "Bitte geben Sie die Adresse (n) ein, an die Sie gemischte Bitcoin senden "
+#~ "möchten. Für die schnellste Transaktion wählen Sie \"Schnellmischen\" in "
+#~ "den Verzögerungseinstellungen und Sie erhalten gemischte Münzen nach "
+#~ "einer Bestätigung."
+
+#~ msgid "View Mix"
+#~ msgstr "Mix anzeigen"
+
+#~ msgid "Are you sure you want to delete your session?"
+#~ msgstr "Sind Sie sicher, dass Sie löschen wollen Ihre session?"
+
+#~ msgid "This action is not reversible!"
+#~ msgstr "Diese Aktion ist nicht umkehrbar!"
+
+#~ msgid ""
+#~ "Send us your bitcoins, and we send you back coins that are completely "
+#~ "disconnected from your trail of transactions, making it harder to link "
+#~ "your identity with your transactions and holdings. Simple!"
+#~ msgstr ""
+#~ "Schicke uns Deine Bitcoins und wir senden Dir Bitcoins zurück, die von "
+#~ "der Transaktionshistorie Deiner Bitcoins komplett getrennt sind. Damit "
+#~ "machst Du es schwer Deine Identität mit Deinen Bitcoins in Verbindung zu "
+#~ "bringen. Ganz einfach!"
+
+#~ msgid ""
+#~ "Clean, fresh bitcoins will be delivered to your address after 1 "
+#~ "confirmation unless you choose a delayed payment. In that case, the delay "
+#~ "countdown starts once your incoming transaction has 1 confirmation."
+#~ msgstr ""
+#~ "Deine blitzblank sauberen Bitcoins werden nach 1 Bestätigung an Dich "
+#~ "versandt außer Du hast Dich für eine zeitliche Verzögerung der Auszahlung "
+#~ "entschieden. In diesem Fall startet der Delay Countdown, sobald die "
+#~ "Eingangszahlung 1 Confirmation hat."
+
+#~ msgid "What does it cost?"
+#~ msgstr "Wieviel kostet es?"
+
+#, python-format
+#~ msgid ""
+#~ "We take a %(service)s %% service fee plus a %(tr)s BTC per payout address "
+#~ "transaction fee."
+#~ msgstr ""
+#~ "Wir nehmen eine Servicegebühr von %(service)s %% zuzüglich einer "
+#~ "Transaktionsgebühr von %(tr)s BTC pro Auszahlungsadresse."
+
+#~ msgid "Do you have minimum or maximum mix amounts?"
+#~ msgstr "Habt Ihr ein Maximalbetrag für die Reinigung?"
+
+#, python-format
+#~ msgid ""
+#~ "We don't mix amounts lower than %(minim)s BTC, and the current maximum is "
+#~ "%(max_disp)s BTC."
+#~ msgstr ""
+#~ "Wir reinigen keine Beträge unterhalb von %(minim)s BTC und oberhalb von "
+#~ "is %(max_disp)s BTC."
+
+#~ msgid ""
+#~ "Hiding your identity in this digital world can be tricky, and you might "
+#~ "be leaving behind several digital footprints without realizing. Anonymix "
+#~ "is here to help you keep your bitcoin transactions anonymous and private. "
+#~ "When you start a mix with us, we exchange the bitcoins you send us with "
+#~ "coins from our reserve pool that can't be traced to your identity or your "
+#~ "previous transactions. To be extra safe we also offer options to delay "
+#~ "your payout and send it to multiple addresses. We keep our fees low and "
+#~ "reserve pools large to make sure we can always give you the best possible "
+#~ "service."
+#~ msgstr ""
+#~ "Es kann schwierig sein, in der digitalen Welt seine Identität zu "
+#~ "verstecken. Man kann seinen digitalen Fingerabdruck hinterlassen ohne es "
+#~ "zu merken. Mit Bitcoin Laundry machst Du Deine Bitcointransaktionen "
+#~ "anonym und privat."
+
+#~ msgid ""
+#~ "If you want an instant transaction, select Instant in the delay menu and "
+#~ "your coins will be sent after one confirmation."
+#~ msgstr ""
+#~ "Bitte gib für den Empfang der gereinigten Bitcoins Deine Empfangsadresse "
+#~ "bzw. Deine Empfangsadressen an. Wenn Du eine unmittelbare Rückzahlung "
+#~ "wünschst, wähle Instant im Verzögerungsmenü und Deine gereinigten "
+#~ "Bitcoins werden Dir nach 1 Bestätigung zugeschickt."
+
+#~ msgid ""
+#~ "Use this form to send us a message and we'll get back to you right away."
+#~ msgstr ""
+#~ "Benutze dieses Formular und wir werden uns schnellstmöglich zurückmelden."
+
+#~ msgid "Clean bitcoins now"
+#~ msgstr "Bitcoins jetzt reinigen"
+
+#~ msgid "With <b>Session ID</b> you can always return to check on your status"
+#~ msgstr ""
+#~ "Mit <b>Session ID</b> kannst Du zurückkommen und den Vorgangsstatus "
+#~ "checken."
+
+#~ msgid "Welcome to Bitcoin Laundry"
+#~ msgstr "Willkommen bei Bitcoin Laundry"
+
+#~ msgid "Your Mixing Solution for <b>Squeaky Clean Bitcoins</b>"
+#~ msgstr "Deine Sofortreinigung für <b>strahlend saubere Bitcoins</b>"
+
+#~ msgid "Clean your BTC now"
+#~ msgstr "Reinige deine BTC jetzt"
+
+#, python-format
+#~ msgid ""
+#~ "Warning! You have sent in <b> over the maximum </b> allowed by the mixer! "
+#~ "The mixer will only return up to <b>%(maxim)s</b> BTC</div>"
+#~ msgstr ""
+#~ "Achtung! Du hast mehr <b> over the maximum </b> als den Maximalbetrag von "
+#~ "Bitcoin Laundry eingezahlt! Bitcoin Laundry kann nur bis zu <b>%(maxim)s</"
+#~ "b> BTC zurückzahlen"
+
+#~ msgid "General info"
+#~ msgstr "Allgemeine Infos"
+
+#~ msgid "Minimum Payment"
+#~ msgstr "Mindestzahlung"
+
+#~ msgid "Maximum payment"
+#~ msgstr "Maximalzahlung"
+
+#~ msgid "hour(s)"
+#~ msgstr "Stunde(n)"
+
+#~ msgid "Service fee"
+#~ msgstr "Servicegebühr"
+
+#~ msgid "Transaction fee per address"
+#~ msgstr "Transaktionsgebühr pro Adresse"
+
+#~ msgid "Total transaction fee"
+#~ msgstr "Gesamte Transaktionsgebühr"

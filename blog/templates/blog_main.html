@@ -1,0 +1,64 @@
+{% extends 'footer.html' %}
+{% block content %}
+{% load i18n %}
+{% get_current_language as lg %}
+<div class="page-wrapper">
+  <!-- Header -->
+  <header>
+      <img src="/assets/img/AMbackground_original.jpg" class="banner-image">
+  </header>
+
+    <section class="py-5">
+      <div class="container">
+          <header class="section-header">
+              <h1 class="display-4 mb-6">
+                <strong>{% trans "Blog" %}</strong>
+              </h1>
+          <header>
+              {% for post in posts %}
+              <article class="my-8">
+                <div class="row">
+                 <div class="col-md-8 col-xl-6">
+
+                       <header class="text-center">
+                          <h3>
+                            <a href="/blog/{{post.slug}}">{{post.title}}</a>
+                          </h3>
+                       </header>
+                       <div class="card-body text-center">
+                          <div class="mb-3 small-2 text-lighter">
+                             <div class="text-center">
+                                <a class="text-inherit" href="#">by Anonymix</a>
+                                <span class="align-middle px-1">&bull;</span>
+            										<time datetime="2018-05-15T19:00">
+            											at {{post.date}}</time>
+                             </div>
+                          </div>
+                          <p class="text-justify">{{post.small_description}}</p>
+          								<p class="text-center mt-4">
+          									<a class="btn btn-info btn-round" href="/{{lg}}/blog/{{post.slug}}">Read more</a>
+          								</p>
+                       </div>
+                 </div>
+                 <div class="col-md-4 col-xl-6">
+                   <a href="/blog/{{post.slug}}"><img class="rounded-md" style="min-width: 100%;" src="{{post.image}}" alt="{{post.title}}"></a>
+                 </div>
+                </div>
+              </article>
+              {% endfor %}
+
+
+
+                            <!-- <hr>
+
+                        <nav class="flexbox my-8">
+                            <a class="btn btn-outline-secondary" href="/blog?page={{pagenew}}"><i class="fas fa-long-arrow-alt-left mr-2"></i> Newer</a>
+
+                            <a class="btn btn-outline-secondary" href="/blog?page={{pageold}}">Older <i class="fas fa-long-arrow-alt-right ml-2"></i></a>
+                        </nav> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

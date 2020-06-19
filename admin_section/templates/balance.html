@@ -1,0 +1,33 @@
+{% extends 'foot2.html' %}
+{% block content %}
+{% load tool2 %}
+<header class="header text-white" style="background-image: url('/assets/img/background.jpg');">
+	<div class="overlay opacity-0" style="background-color: #ffffff"></div>
+	<div class="container text-center">
+	  <h1 class="display-4 mb-6">
+		<strong>Balance</strong>
+	  </h1>
+	</div>
+  </header>
+
+  <div class="page-wrapper">
+    <main class="main-content text-center py-8">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <h6 class="divider">Current balance in mixer</h6>
+                  <p>{{balance}}</p>
+                  <p>If you want to seed the mixer - send Bitcoins to</p>
+                  <p><code>{{deposit}}</code></p>
+                  <center>
+                      {% get_qrcode deposit as src %}
+                      <img src='{{src}}'>
+                </center>
+              </div>
+          </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+{% endblock %}

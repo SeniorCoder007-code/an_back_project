@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Admin panel - Anonymix</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon.png">
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="">
+
+    <meta name="theme-color" content="#ffffff">
+    <link href="/assets/css/app.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/cf0eeb2aae.js"></script>
+
+	<script src="/assets/js/app.js"></script>
+	<link href="/assets/css/addons/datatables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-faded d-block d-lg-none">
+      <input type="checkbox" id="navbar-toggle-cbox">
+      <label for="navbar-toggle-cbox" class="navbar-toggler hidden-sm-up" data-toggle="collapse"
+             data-target="#navbar-header" aria-controls="navbar-header">
+          &#9776;
+      </label>
+      <div class="collapse navbar-toggleable-xs" id="navbar-header">
+          <div class="container">
+              <div class="row">
+				<section class="col-12 navbar-mobile">
+					<nav>
+					  <ul class="nav nav-navbar mx-auto nav-center">
+						<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/panel">Mixes</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/all">Posts</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/settings">Settings</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/balance">Balance</a>
+					</li>
+					   
+					  </ul>
+					</nav>
+				</section>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark d-none d-lg-block">
+      <div class="container">
+          <div class="row">
+              <div class="navbar-left col-lg-3">
+                  <a class="navbar-brand" href="">
+                      <img class="logo-dark" src="/assets/img/logo/logow_text.png" alt="logo">
+                      <img class="logo-light" src="/assets/img/logo/logow_text.png" alt="logo">
+                  </a>
+              </div>
+
+              <section class="col-lg-6">
+				<nav>
+				  <ul class="nav nav-navbar mx-auto nav-center">
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/panel">Mixes</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/all">Posts</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/settings">Settings</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="/bitadm/balance">Balance</a>
+					</li>
+					
+				  </ul>
+				</nav>
+			</section>
+
+			<div class="text-right col-lg-3">
+				<div class="btn-group-vertical" role="group" aria-label="Basic example">
+					<a href="/bitadm/logout" class="btn btn-sm btn-round btn-danger mb-1">
+						Logout
+					</a>
+					<a class="btn btn-sm btn-round btn-danger btn-outline-danger" href="/">Back to website</a>
+				</div>
+			</div>
+
+          </div>
+      </div>
+  </nav>
+  {% block content %}
+  {% endblock %}

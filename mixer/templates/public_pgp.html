@@ -1,0 +1,23 @@
+{% extends 'footer.html' %}
+{% block content %}
+<div class="page-wrapper">
+		<header class="header text-white" style="background-image: url('/assets/img/background.jpg');">
+			<div class="overlay opacity-0" style="background-color: #ffffff"></div>
+			<div class="container text-center">
+				<h1 class="display-4 mb-6">
+				  <strong>Public PGP Key</strong>
+				</h1>
+			</div>
+		</header>
+
+		<section class="py-4 text-center">
+			<div class="container">
+			  <div class="row">
+				  <div class="col-md-12">
+						<pre class="pre-scrollable">{{key}}</pre>
+						<p class="lead">This is the Anonymix public PGP key. It can be used to verify the authenticity of messages signed by us or to encrypt messages you send to us.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+{% endblock %}

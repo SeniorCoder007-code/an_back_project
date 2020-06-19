@@ -1,0 +1,59 @@
+{% extends 'foot2.html' %}
+{% block content %}
+<header class="header text-white" style="background-image: url(/assets/img/background.jpg);">
+	<div class="container text-center">
+		<h1 class="display-4 mb-6"><strong>Post Lists</strong></h1>
+	</div>
+</header>
+
+  <div class="container">
+      <section class="section py-8">
+          <div class="row">
+              <div class="col-md-12">
+              			{% if message %}
+                      <div class="alert alert-success text-center" role="alert">
+                           {{message}}
+                      </div>
+                      {% endif %}
+
+                  <div class="text-center">
+                      <a href="/bitadm/new" class="btn btn-warning my-5">Add post</a>
+
+                          <table class="table table-condensed">
+                              <tr>
+                                  
+                                  <td><b>Title</b></td>
+                                  <td><b>Created at</b></td>
+                                  <td><b>Edit</b></td>
+                                  <td><b>Delete</b></td>
+                              </tr>
+                              	{% for post in posts %}
+                                  <tr>
+                                      
+                                      <td> {{post.title}} </td>
+                                      <td> {{post.date}} </td>
+                                      <td>
+                                          <a class="btn btn-info btn-sm"
+                                             href="/bitadm/modify/{{post.slug}}">
+                                              Edit
+                                          </a>
+                                      </td>
+                                      <td>
+                                        <a class="btn btn-danger btn-sm" href="/bitadm/delete/{{post.slug}}">
+                                              Delete
+                                          </a>
+                                      </td>
+                                  </tr>
+                                  {% endfor %}
+
+                          </table>
+
+              </div>
+
+          </div>
+      </section>
+  </div>
+</body>
+</html>
+
+{% endblock %}

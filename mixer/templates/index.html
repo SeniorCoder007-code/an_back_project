@@ -1,0 +1,132 @@
+{% extends  'footer.html' %}
+{% block content %}{% load i18n %}
+{% get_current_language as lg %}
+
+<div class="page-wrapper">
+    <!-- Header -->
+    <header>
+        <img src="/assets/img/AMbackground_original2.jpg" class="banner-image">
+        <div class="mobile text-center">
+            <p>
+                <strong class="text-size-the-anonymix text-center">
+                    <span class="white">{% trans "This is" %}</span>
+                    <span class="red">{% trans "Anonymix" %}</span>
+                </strong>
+                <br>
+                <span class="white-gray-gradient text-center">
+                    {% trans "Bitcoins without a trace..." %}
+                </span>
+            </p>
+            <a class="btn btn-xl btn-round btn-light text-center" href="">Begin Mix</a>
+        </div>
+        <div class="desktop-ipad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <p class="anonymous-text-left">
+                            <strong class="text-size-the-anonymix">
+                                <span class="white">{% trans "This is" %}</span>
+                                <span class="red">{% trans "Anonymix" %}</span>
+                            </strong>
+                            <br>
+                            <span class="white-gray-gradient">
+                                {% trans "Bitcoins without a trace..." %}
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="btn btn-xl btn-round btn-light anonymous-button-right " href="/{{lg}}/newmix">{% trans 'Begin Mix' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="section bg-gray section-small-padding " id="whymix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <img class="pt-5" src="/assets/img/mixbag02.png" alt="Why mix image">
+                    </div>
+                    <div class="col-md-6 order-md-first">
+                        <h3>{% trans "How safe are your bitcoins?" %}</h3>
+                        <!--<p>
+                          <b>{% trans "How safe are your bitcoins?" %}</b>
+                        </p>-->
+                        <p>
+                          {% trans "You might think that your payments using bitcoin are completely anonymous and can never be connected to your real identity, but the truth is that bitcoin transactions can easily be traced on the blockchain. If you don't take extra steps to protect your privacy, it's possible for blockchain analysis firms or hackers to find out your transaction history, how much bitcoin you have, and even who you are. At Anonymix, we're committed to keeping your identity and financial information secure. Here's how it works: You send us bitcoin, and we send back new bitcoins to a new address that you control. This breaks any continuity on the blockchain between your old activity and your new coins, making it nearly impossible to follow the new trail. For extra anonymity, you can choose to delay your mixer payment, and send your new coins to more than one address." %}
+                      </p>
+                    </div>
+                </div>
+            </div>
+		</section>
+		<section class="section section-small-padding" id="features">
+            <div class="container">
+                <header class="section-header">
+
+                    <h2>{% trans "Features" %}</h2>
+                    <hr>
+                </header>
+                <div class="row gap-y">
+                    <div class="w-100"></div>
+                    <div class="col-md-4 col-xl-4">
+                        <div class="media">
+                            <div class="lead-6 line-height-1 text-info mb-2"><img src="/assets/img/Features/Anonymous.png" class="img-fluid"></div>
+                            <div class="media-body">
+                                <h5>{% trans "Speed and Security" %}</h5>
+                                <p>{% trans "Choose 'Quick Mix' to receive your coins after one confirmation. For extra security, pick a timed or random delay to make your coins more difficult to trace." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <div class="media">
+                            <div class="lead-6 line-height-1 text-info mb-2"><img src="/assets/img/Features/Fast.png" class="img-fluid"></div>
+                            <div class="media-body">
+                                <h5>{% trans   "High Capacity" %}</h5>
+                                {% load tool %}
+                                   {% render_int s.max_usr_disp_pay as maxim %}
+                                <p>{% blocktrans with max=maxim %}Due to our unique reserve that includes both hot and cold storage, we can handle mixes of up to {{max}} BTC.{% endblocktrans %}                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <div class="media">
+                            <div class="lead-6 line-height-1 text-info mb-2"><img src="/assets/img/Features/NoLogs.png" class="img-fluid"></div>
+                            <div class="media-body">
+                                <h5>{% trans 'The Chance to Win Bitcoin' %}</h5>
+                                <p>{% blocktrans with num=s.shuffle_num per=s.shuffle_perc %}Our exciting built-in raffle means you have the chance to win free BTC with every mix! Every {{num}}th mix wins a {{per}}% bonus on the amount mixed. Mix with Anonymix every time to increase your chances! {% endblocktrans %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <div class="media">
+                            <div class="lead-6 line-height-1 text-info mb-2"><img src="/assets/img/Features/MultipleAddresses.png" class="img-fluid"></div>
+                            <div class="media-body">
+                                <h5>{% trans "Multiple Addresses" %}</h5>
+                                <p>{% trans "Increase the security of your mix by making your deposit from multiple wallets, and sending your mixed funds to up to five receiving addresses." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <div class="media">
+                            <div class="lead-6 line-height-1 text-info mb-2"><img src="/assets/img/Features/FairPrice.png" class="img-fluid"></div>
+                            <div class="media-body">
+                                <h5>{% trans "Certificate of Origin" %}</h5>
+                                <p>{% trans "We issue a certificate of origin with every mix that guarantees the coins you receive came from Anonymix." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <div class="media">
+                            <div class="lead-6 line-height-1 text-info mb-2"><img src="/assets/img/Features/Secure.png" class="img-fluid"></div>
+                            <div class="media-body">
+                                <h5>{% trans "No Logs" %}</h5>
+                                <p>{% trans "We offer the option to delete your mix immediately. If you don't delete your mix, we keep the details for one week in case you need to contact us. After one week all logs are automatically deleted." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </main>
+ {% endblock %}

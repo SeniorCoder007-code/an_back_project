@@ -1,0 +1,75 @@
+{% extends 'footer.html' %} {% block content %}{% load i18n %} {% get_current_language as lg %}
+<!-- Header -->
+<header>
+    <img src="/assets/img/AMbackground_original.jpg" class="banner-image">
+</header>
+<div class="page-wrapper">
+    <section class="py-5">
+        <div class="container">
+            <header class="section-header">
+                <h1 class="display-4 mb-6">
+                    <strong>{% trans "Contact" %}</strong>
+                </h1>
+                <p class="lead">{% trans "Something not working? Use this form to contact Anonymix support." %}</p>
+            </header>
+            <div class="col-12">
+                {% if 'success' == message %}
+                <div class="alert alert-success text-center">
+                    {% trans "We have received your message and will respond shortly." %}</div>
+                {% elif message == 'failed' %}
+                <div class="alert alert-danger text-center">{% trans "Message sending failed" %}</div>
+                {% elif message == 'captcha not valid' %}
+                <div class="alert alert-danger text-center">{{message}}</div>
+                {% endif %}
+                <form method="POST" action="/{{lg}}/sendmail" accept-charset="UTF-8" class="form-row input-border">
+                    {% csrf_token %}
+                    <input name="_token" type="hidden" value="SIzUauFL4PJCktNc6FIgxrjRjoq3TiIXdXQZbahe">
+                    <input name='token'  hidden value='{{token}}'>
+
+                    <div class="form-group col-sm-12">
+                        <input placeholder="Email" required="" class="form-control form-control-lg input-rounded" name="email" type="email">
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <input placeholder="{% trans 'Subject' %}" required="" class="form-control form-control-lg input-rounded" name="subject" type="text">
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <input placeholder="{% trans 'Mix ID' %}" required="" class="form-control form-control-lg input-rounded" name="session" type="text">
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <textarea placeholder="{% trans 'Write message here' %}" required="" class="form-control form-control-lg input-rounded" name="bodyMessage" cols="50" rows="5"></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 col-xl-2">
+                        <img src='{{link}}' style="height: 100%">
+                        <a class="ml-2 btn btn-sm btn-danger" href="/{{lg}}/contact">
+                            <i class="icon-refresh" style="color: #fff;"></i>
+                        </a>
+                    </div>
+                    <div class="form-group col-sm-12 col-xl-10">
+                        <input placeholder="Captcha" required="" class="form-control form-control-lg input-rounded" name="captcha" type="text">
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-xl btn-info btn-round" type="submit">{% trans "Send" %}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead">
+                        {% trans "This is the Anonymix public PGP key. It can be used to verify the authenticity of messages signed by us or to encrypt messages you send to us." %}
+                    </p>
+                    <pre class="pre-scrollable">{{key}}</pre>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

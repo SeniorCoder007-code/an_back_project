@@ -1,0 +1,162 @@
+{% extends 'footer.html' %} {% block content %} {% load tool %}{% load i18n %} {% get_current_language as lg %}
+<header>
+    <img src="/assets/img/AMbackground_original.jpg" class="banner-image">
+</header>
+<div class="page-wrapper">
+
+    <section class="mix-page-section py-5">
+        <div class="container">
+            <header class="section-header">
+                <h1 class="display-4 mb-6">
+                    <strong>Mix</strong>
+                </h1>
+            </header>
+            <div class='text-center'>
+                <h4 class="mt-0">{% trans "Mix status:" %}
+
+                    <a href="" class="red ">
+                        <strong>{{mix.mix_status}}</strong>
+                    </a>
+                    </h4>
+            </div>
+
+
+
+
+
+            <header class="text-center">
+
+                {% if mix.mix_status == 'done' %} {% if mix.validated_winner %}
+                <div class="col-12 text-center alert alert-success">
+                    {% get_percentage sett.shuffle_perc as prc %}
+
+                    <h1>Congratulations</h1>
+                    <p>You are the winner of our randomised raffle<br> As a prize you received following bonus : {{prc}}%</p>
+
+                </div>
+                {% endif %} {% endif %} {% if mix.mix_status == 'done' %}
+
+                <img class="py-5" src="/assets/img/mixbag02small.png" alt="" style="width:20%;"> {% else %}
+                <img class="py-5" src="/assets/img/mixbag03.png" alt="" style="width:10%;"> {% endif %}
+
+
+
+
+
+                <!--<img class="py-5" src="assets/img/mixbag03.png') }}" alt="" style="width:10%;">-->
+
+                <p class="text-center text-dark" style="word-break: break-all">
+                    <strong>{% trans "Your Mix ID:" %} {{mix.mix_id}}</strong>
+                    <br> {% trans "Save this number! This is the only identifier of your mix and you will use it to check the status of this session." %}
+                </p>
+                <p class="text-dark">
+                    {% render_dec sett.min_usr_pay as min %}
+                    <strong class="red">
+                        {% blocktrans with mn=min %}Do not send less than {{mn}} BTC{% endblocktrans %}
+                        <br>
+                        {% render_dec sett.max_usr_disp_pay as max %}
+                        {% blocktrans with mx=max %}Do not send more than {{mx}} BTC{% endblocktrans %}
+                    </strong>
+                </p>
+            </header>
+            {% if mix.mix_status == 'done' %}
+            <div id="certificate-of-origin" class="row">
+                <div class="col-md-12">
+                    <div class="mix-section-title"> {% trans 'Certificate of origin' %}</div>
+                    <p>{% trans 'We issue a certificate of origin with every mix that guarantees the coins you receive came from Anonymix' %}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {% get_pgp mix.mix_id as pgptext %}
+                    <pre class="pre-scrollable">{{ pgptext }}</pre>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="row bg-secondary py-5 px-5">
+                <div class="col-md-12">
+                    <h5 class="red">
+                        <strong>{% trans "Deposit address:" %} {{mix.deposit_address}}</strong>
+                    </h5>
+                </div>
+                <div class="col-md-2">
+                    {% get_qrcode mix.deposit_address as src %}
+                    <img src='{{src}}'>
+                </div>
+                <div class="col-md-10">
+                    {% render_int sett.d_inactive as inac %}
+                    <p class="text-dark">
+                        {% blocktrans with inact=inac confirmations=mix.confirmations %}This mix is valid for {{inact}} days. Send your coins to the deposit address within this time limit. Anonymix schedules the payment of your mixed coins once your deposit has {{confirmations}}
+                        confirmation. The arrival of your clean coins depends on your delay settings.{% endblocktrans %}</p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 text-center font-weight-bold">{% trans "Output address(es)" %}</div>
+                        <div class="col-md-4 text-center font-weight-bold">{% trans "Percentages" %}</div>
+                        <div class="col-md-4 text-center font-weight-bold">{% trans "Delay" %}</div>
+                    </div>
+                    {% for add in adds %} {% get_percentage add.percentage as per %}
+                    <div class="row">
+                        <div class="col-md-4 text-center">{{ add.address }}</div>
+                        <div class="col-md-4 text-center">{{per}}%</div>
+                        <div class="col-md-4 text-center">{{ add.delay }} hour(s)</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="row my-5  bg-secondary py-5 px-5">
+                <div class="col-md-6">
+                    <h4 class="red">{% trans "Your deposit payments" %}</h4>
+                    {% if mix.deposit_amount == 0 and mix.non_confirmed == 0 %}
+                    <p class="text-dark">
+                        {% trans "Your incoming transactions will be shown here." %}
+                    </p>
+                    {% else %}
+                    <p class="text-dark" style="word-wrap:break-word;">
+
+                        {% render_dec mix.initial_deposit as amnt %} {% trans "Amount" %}: {{ amnt }} <br> {% render_dec mix.non_confirmed as ncf %} {% trans "Amount" %} (unconfirmed) : {{  ncf }} BTC   <br> {% trans "Confirmations" %}: {{ mix.current_confirmations }} <br> {% trans "Transaction ID(s)" %}: {% for tx in txids %} {{tx}}<br>{% endfor %}
+                    </p>
+                    {% endif %}
+
+                </div>
+                <div class="col-md-6">
+                    <h4 class="red">{% trans "Mixed payout transactions" %}</h4>
+                    {% if status == 2 %}
+                    <p class="text-dark">
+                        {% trans "Your transaction has been sent to Anonymix admin for approval due to high volume. Please check back later." %}
+                    </p>
+                    {% elif status == 1 %}
+                    <p class="text-dark">
+                        {% trans "Warning! You have sent in <b> less than the required minimum </b> of <b>{{min}}</b> <br> You must send in enough to bring your total  input payments up to {{min}} BTC if you want a return payment" %}
+                    </p>
+                    {% elif status == 4 %}
+                    <p class="text-dark">{% blocktrans with conf=mix.confirmations %}Mixed payout will be released after {{conf}} confirmation.{% endblocktrans %}</p>
+                    {% endif %} {% for add in adds %}
+                    <p class="text-dark" style="word-wrap:break-word;">
+                        {% render_dec add.amount_sent as net %}
+                        <strong>{{ add.address}}</strong><br>{% trans "Amount Net:" %} {{net}} BTC <br> {% trans "Delay:" %} {{ add.delay }}<br> {% get_txs add.txid as txidss %} {% trans "Transaction ID(s)" %}: <br> {% for t in txidss %} {{t}} {% endfor %}
+                    </p>
+                    {% endfor %}
+
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-dark">
+                        <a href="/deletemixuser?idd={{mix.mix_id}}" class="btn btn-lg btn-info btn-round w-150">{% trans " Delete" %}</a>
+                    </p>
+                    <p class="text-dark">
+                        {% trans "Click to delete all of your mix information from our servers.<br> Do not delete your mix information before you have receive your mixed bitcoin." %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

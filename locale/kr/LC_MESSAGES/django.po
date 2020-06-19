@@ -1,0 +1,737 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-11 23:08+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: blog/templates/footer.html:99 mixer/templates/footer_back.html:39
+#: mixer/templates/footer_back.html:69 mixer/templates/footer_back.html:107
+msgid "Why Mix"
+msgstr "왜 익명의 이유"
+
+#: blog/templates/footer.html:100 mixer/templates/footer.html:46
+#: mixer/templates/footer.html:93 mixer/templates/footer.html:155
+#: mixer/templates/footer_back.html:40 mixer/templates/footer_back.html:72
+#: mixer/templates/footer_back.html:108 mixer/templates/index.html:67
+#: mixer/templates/index_back.html:65
+msgid "Features"
+msgstr "특징"
+
+#: blog/templates/footer.html:101 mixer/templates/footer.html:48
+#: mixer/templates/footer.html:99 mixer/templates/footer.html:156
+#: mixer/templates/footer_back.html:42 mixer/templates/footer_back.html:78
+#: mixer/templates/footer_back.html:109
+msgid "FAQ"
+msgstr "자주 묻는 질문"
+
+#: blog/templates/footer.html:102 mixer/templates/footer.html:49
+#: mixer/templates/footer.html:102 mixer/templates/footer.html:157
+#: mixer/templates/footer_back.html:43 mixer/templates/footer_back.html:81
+#: mixer/templates/footer_back.html:110
+msgid "Blog"
+msgstr "블로그"
+
+#: blog/templates/footer.html:103 mixer/templates/contact.html:11
+#: mixer/templates/footer.html:50 mixer/templates/footer.html:105
+#: mixer/templates/footer.html:158 mixer/templates/footer_back.html:111
+msgid "Contact"
+msgstr "연락처"
+
+#: blog/templates/footer.html:104 mixer/templates/footer_back.html:45
+#: mixer/templates/footer_back.html:87 mixer/templates/footer_back.html:112
+msgid "Start Session"
+msgstr ""
+
+#: blog/templates/footer.html:105 mixer/templates/footer_back.html:46
+#: mixer/templates/footer_back.html:90 mixer/templates/footer_back.html:113
+msgid "Check Session"
+msgstr ""
+
+#: mixer/templates/contact.html:13
+msgid "Something not working? Use this form to contact Anonymix support."
+msgstr ""
+"작동하지 않는 것이 있습니까?이 양식을 사용하여 Anonymix 지원부에 문의하십시"
+"오."
+
+#: mixer/templates/contact.html:18
+msgid "We have received your message and will respond shortly."
+msgstr "우리는 당신의 메시지를 받았고 곧 반응 할 것입니다"
+
+#: mixer/templates/contact.html:20
+msgid "Message sending failed"
+msgstr ""
+
+#: mixer/templates/contact.html:43
+msgid "Send"
+msgstr "보내기"
+
+#: mixer/templates/contact.html:55
+
+msgid ""
+"This is the Anonymix public PGP key. It can be used to verify the "
+"authenticity of messages signed by us or to encrypt messages you send to us."
+msgstr ""
+"이것은 Anonymix 공개 PGP 키입니다. 서명 한 메시지의 진위 여부를 확인하거나 사"
+"용자가 보내는 메시지를 암호화하는 데 사용할 수 있습니다."
+
+#: mixer/templates/delete.html:14
+msgid "Delete Mix"
+msgstr "믹스 삭제"
+
+#: mixer/templates/delete.html:17
+msgid "Delete your mix?"
+msgstr "믹스 삭제?"
+
+#: mixer/templates/delete.html:18
+msgid "This cannot be undone"
+msgstr "이 작업은 실행 취소 할 수 없습니다."
+
+#: mixer/templates/delete.html:28
+msgid "Delete"
+msgstr "삭제"
+
+#: mixer/templates/faq.html:11
+msgid "Frequently Asked Questions"
+msgstr "자주 묻는 질문들"
+
+#: mixer/templates/faq.html:16
+msgid "When should I use a bitcoin mixer?"
+msgstr "언제 비트 믹 믹서를 사용해야합니까"
+
+#: mixer/templates/faq.html:17
+msgid ""
+"Use a mixer whenever you have bitcoins that could be connected to your "
+"identity or a transaction you don't want to be associated with. "
+"Realistically, this means any bitcoins you receive from someone else, since "
+"you don't know what they've been up to."
+msgstr ""
+"당신이 당신의 신원에 연결할 수 없을 때마다 믹서를 사용하십시오.현실적으로 당"
+"신은 그들이 무엇을 알지 못한다는 것을 알고 있습니다. 있었 잖아"
+
+#: mixer/templates/faq.html:23
+msgid "How does it work?"
+msgstr "어떻게 작동합니까"
+
+#: mixer/templates/faq.html:24
+
+msgid ""
+"Anonymix is a tool to give you back control over your online anonymity. When "
+"you send us your bitcoins, we'll send you new ones to the wallet of your "
+"choice-- or even to several wallets. This ends the trail of any old wallets "
+"and coins, which may be associated with your identity and past transactions. "
+"Get a clean start on the blockchain by sending your mixed coins to a new "
+"wallet."
+msgstr ""
+"Anonymix는 온라인 익명 성을 다시 제어 할 수있는 도구입니다. 우리에게 비트 코"
+"인을 보내면 원하는 지갑이나 지갑에 보내드립니다. 이렇게하면 신분과 과거 거래"
+"와 관련된  이전 지갑과 모서리가 끝납니다. 혼합 된 동전을 새 지갑에 보내서 블"
+"록 체인을 새로시작하십시오."
+
+#: mixer/templates/faq.html:30
+msgid "What are your fees?"
+msgstr "당신의 수수료는 무엇입니까"
+
+#: mixer/templates/faq.html:32
+
+msgid ""
+"We have two fees, a service fee and a transaction fee. The service fee is  "
+"%(ss)s%% and the\n"
+"                            transaction fee is %(tr)s BTC per payout address."
+msgstr ""
+"우리는 두 가지 수수료가 있습니다, 지불금 주소 당 서비스 수수료 %(ss)s%% 및 거래 "
+"수수료 %(tr)s BTC."
+
+#: mixer/templates/faq.html:38
+msgid "How long does the mixing process take?"
+msgstr "믹싱 과정은 얼마나 걸립니까"
+
+#: mixer/templates/faq.html:40
+
+msgid ""
+"That depends on the settings you choose at the beginning of your mix. If you "
+"want your coins back quickly, choose 'Quick Mix' and receive clean coins "
+"after one confirmation. For extra anonymity, choose one of the delay\n"
+"                        options. The timer to release your coins will start "
+"after the transaction has 1 confirmation."
+msgstr ""
+"코너를 빨리 원한다면 'Quick Mix'를 선택하고 확인 후 깨끗한 코너를 얻으십시오 "
+"익명 성을 높이고 시간 지연을 선택하고 거래를 확인한 후 타이머가 시작되어 코인"
+"을 출시합니다."
+
+#: mixer/templates/faq.html:46
+msgid "Does Anonymix keep logs?"
+msgstr "로그 정책은 무엇입니까"
+
+#: mixer/templates/faq.html:47
+msgid ""
+"At Anonymix, you have the option to delete all records of your mix right "
+"away. If you don't choose to delete your mix from our records right away, we "
+"keep logs for seven days to provide customer support. After seven days all "
+"logs are deleted automatically. Please note that if you have deleted your "
+"mix our User Support team may be unable to assist you, so we highly "
+"recommend waiting until your mix has arrived at your receiving address "
+"before deleting it."
+msgstr "Anonymix에서는 믹스의 모든 레코드를 즉시 삭제할 수 있습니다. 레코드에서 믹스를 즉시 삭제하지 않으면 고객 지원을 위해 7 일 동안 로그를 보관합니다. 7 일 후에 모든 로그가 자동으로 삭제됩니다. 믹스를 삭제 한 경우 사용자 지원 팀에서 지원하지 못할 수 있으므로 믹스를 삭제하기 전에 믹스가 수신 주소에 도달 할 때까지 기다리는 것이 좋습니다."
+
+#: mixer/templates/faq.html:53
+msgid "What happens if something goes wrong?"
+msgstr "문제가 발생하면 어떻게됩니까?"
+
+#: mixer/templates/faq.html:54
+
+msgid ""
+"If there's a problem with your mix or you think something isn't working the "
+"way it should, please use our support page to get in touch with the Anonymix "
+"user support. Our team is committed to making sure you have a top-notch "
+"experience with our service."
+msgstr ""
+"믹스에 문제가 있거나 무언가가 제대로 작동하지 않는다고 생각되면 지원 페이지"
+"를 사용하여 Anonymix 사용자 지원에 문의하십시오. 우리 팀은 당신이 우리의 서비"
+"스에 대해 최고의 경험을 할 수 있도록 최선을 다하고 있습니다."
+
+#: mixer/templates/footer.html:44 mixer/templates/footer_back.html:38
+msgid "Home"
+msgstr "홈"
+
+#: mixer/templates/footer.html:45 mixer/templates/footer.html:90
+#: mixer/templates/footer.html:154
+msgid "Why Anonymix?"
+msgstr "왜 Anonymix인가"
+
+#: mixer/templates/footer.html:47 mixer/templates/footer.html:96
+#: mixer/templates/footer_back.html:41 mixer/templates/footer_back.html:75
+msgid "Key"
+msgstr ""
+
+#: mixer/templates/footer.html:51 mixer/templates/footer.html:108
+#: mixer/templates/footer.html:159 mixer/templates/index.html:38
+#: mixer/templates/new_mix_3.html:46 mixer/templates/new_mix_3.html:113
+msgid "Begin Mix"
+msgstr "시작하기"
+
+#: mixer/templates/footer.html:52 mixer/templates/footer.html:111
+#: mixer/templates/footer.html:160 mixer/templates/status.html:9
+#: mixer/templates/status.html:25
+msgid "Mix Info"
+msgstr "믹스 정보"
+
+#: mixer/templates/footer.html:165
+msgid "Donations"
+msgstr "기부 주소"
+
+#: mixer/templates/footer_back.html:44 mixer/templates/footer_back.html:84
+msgid "Support"
+msgstr ""
+
+#: mixer/templates/index.html:12 mixer/templates/index.html:28
+#: mixer/templates/index_back.html:10 mixer/templates/index_back.html:26
+msgid "This is"
+msgstr "이것은 Anonymix입니다."
+
+#: mixer/templates/index.html:13 mixer/templates/index.html:29
+#: mixer/templates/index_back.html:11 mixer/templates/index_back.html:27
+msgid "Anonymix"
+msgstr "왜 익명의 이유"
+
+#: mixer/templates/index.html:17 mixer/templates/index.html:33
+#: mixer/templates/index_back.html:15 mixer/templates/index_back.html:31
+msgid "Bitcoins without a trace..."
+msgstr "추적이없는 Bitcoins..."
+
+#: mixer/templates/index.html:52 mixer/templates/index.html:54
+msgid "How safe are your bitcoins?"
+msgstr "당신의 비트 코는 얼마나 안전합니까"
+
+#: mixer/templates/index.html:57
+msgid ""
+"You might think that your payments using bitcoin are completely anonymous "
+"and can never be connected to your real identity, but the truth is that "
+"bitcoin transactions can easily be traced on the blockchain. If you don't "
+"take extra steps to protect your privacy, it's possible for blockchain "
+"analysis firms or hackers to find out your transaction history, how much "
+"bitcoin you have, and even who you are. At Anonymix, we're committed to "
+"keeping your identity and financial information secure. Here's how it works: "
+"You send us bitcoin, and we send back new bitcoins to a new address that you "
+"control. This breaks any continuity on the blockchain between your old "
+"activity and your new coins, making it nearly impossible to follow the new "
+"trail. For extra anonymity, you can choose to delay your mixer payment, and "
+"send your new coins to more than one address."
+msgstr ""
+"당신은 당신의 지불이비트 코인완전히 익명이고 실제 신원과 연결할 수는 없지만 "
+"사실은사실은 비트코인 거래를거래를 쉽게 추적 할 수 있습니다블록 체인. 개인 정"
+"보를 보호하기 위해 별도의 조치를 취하지 않으면블록 체인분석 회사 또는 해커가 "
+"거래 내역을 찾는 방법, 비트 코인너와 너는 누구야. Anonymix에서는 귀하의 신원"
+"을 밝히고 정보를 안전하게 보호합니다. 작동 원리는 다음과 같습니다. 비트 코인,"
+"우리는 새로운 것을 돌려 보낸다. 비트 코인귀하가 관리하는 새 주소로 이로 인해"
+"블록 체인이전 활동과 새로운 활동 사이모서리, 새로운 흔적을 따라 가기가 거의 "
+"불가능합니다. 여분을 위해익명, 당신은 당신의 지불을 선택하고 새로운 것을 보냅"
+"니다. 모서리하나 이상의 주소."
+
+#: mixer/templates/index.html:76
+msgid "Speed and Security"
+msgstr "속도와 보안"
+
+#: mixer/templates/index.html:77
+
+msgid ""
+"Choose 'Quick Mix' to receive your coins after one confirmation. For extra "
+"security, pick a timed or random delay to make your coins more difficult to "
+"trace."
+msgstr ""
+"한 번 확인한 후에 동전을 받으려면 '빠른 혼합'을 선택하십시오. 보안을 강화하려"
+"면 모서리를 추적하기가 더 어려워 지도록 시간 지연 또는 임의 지연을 선택하십시"
+"오."
+
+#: mixer/templates/index.html:85
+msgid "High Capacity"
+msgstr "고용량"
+
+#: mixer/templates/index.html:88
+
+msgid ""
+"Due to our unique reserve that includes both hot and cold storage, we can "
+"handle mixes of up to %(max)s BTC."
+msgstr ""
+"핫 스토리지와 콜드 스토리지를 모두 포함하는 독보적 인 준비로 인해 최대 %(max)s 대"
+"의 BTC 믹스를 처리 할 수 ​​있습니다."
+
+#: mixer/templates/index.html:96
+msgid "The Chance to Win Bitcoin"
+msgstr "비트코인을 승리길 기회"
+
+#: mixer/templates/index.html:97
+
+msgid ""
+"Our exciting built-in raffle means you have the chance to win free BTC with "
+"every mix! Every %(num)sth mix wins a %(per)s%% bonus on the amount mixed. "
+"Mix with Anonymix every time to increase your chances"
+msgstr ""
+
+
+#: mixer/templates/index.html:105 mixer/templates/index_back.html:102
+msgid "Multiple Addresses"
+msgstr "다중 주소"
+
+#: mixer/templates/index.html:106
+msgid ""
+"Increase the security of your mix by making your deposit from multiple "
+"wallets, and sending your mixed funds to up to five receiving addresses."
+msgstr ""
+"당신의 지갑에 의한 당신의 공급의 안전성을 높이고, 혼합 된 기금을 수령 국에 보"
+"냄"
+
+#: mixer/templates/index.html:114
+msgid "Certificate of Origin"
+msgstr "원산지 증명서"
+
+#: mixer/templates/index.html:115
+
+msgid ""
+"We issue a certificate of origin with every mix that guarantees the coins "
+"you receive came from Anonymix."
+msgstr ""
+"우리는 Anonymix로부터받는 모서리를 보장하는 모든 조합으로 원산지 증명서를 발"
+"급합니다"
+
+#: mixer/templates/index.html:123 mixer/templates/index_back.html:93
+msgid "No Logs"
+msgstr "로그 없음"
+
+#: mixer/templates/index.html:124
+msgid ""
+"We offer the option to delete your mix immediately. If you don't delete your "
+"mix, we keep the details for one week in case you need to contact us. After "
+"one week all logs are automatically deleted."
+msgstr ""
+"우리는 귀하의 믹스를 즉시 삭제할 수있는 옵션을 제공합니다. 귀하가 귀하의 믹스"
+"를 삭제하지 않을 경우 당사에 연락해야 할 경우에 대비하여 1 주일 동안 세부 정"
+"보를 보관합니다. 일주일 후 모든 로그가 자동으로 삭제됩니다."
+
+#: mixer/templates/index_back.html:50
+msgid "Why Mix?"
+msgstr "왜 Anonymix인가"
+
+#: mixer/templates/index_back.html:52
+msgid ""
+"Did you know that Bitcoin transactions are not anonymous and can be tracked?"
+msgstr ""
+
+#: mixer/templates/index_back.html:55
+msgid ""
+"Hiding your identity in this digital world can be tricky, and you might be "
+"leaving behind several digital footprints without realizing. Bitcoin Laundry "
+"is here to help you keep your bitcoin transactions anonymous and private. "
+"When you start a mix with us, we exchange the bitcoins you send us with "
+"coins from our reserve pool that can't be traced to your identity or your "
+"previous transactions. To be extra safe we also offer options to delay your "
+"payout and send it to multiple addresses. We keep our fees low and reserve "
+"pools large to make sure we can always give you the best possible service."
+msgstr ""
+
+#: mixer/templates/index_back.html:74
+msgid "Anonymous"
+msgstr ""
+
+#: mixer/templates/index_back.html:75
+msgid ""
+"You'll never have to create an account to use our service. For extra privacy "
+"protection, we recommend visiting us at our .onion address <a href='http://:"
+"link'>:link</a>"
+msgstr ""
+
+#: mixer/templates/index_back.html:83
+msgid "Fast"
+msgstr ""
+
+#: mixer/templates/index_back.html:84
+msgid ""
+"If you don't choose a random delay on your coins, they'll be sent out after "
+"only 1 confirmation. If you want to make your coins even harder to trace, "
+"you can opt for a delayed payout."
+msgstr ""
+
+#: mixer/templates/index_back.html:94
+msgid ""
+"If you don't want any record of your mix, you can delete it right away. If "
+"you choose not to delete it, we'll keep it for seven days to provide "
+"customer support and then it will be deleted automatically."
+msgstr ""
+
+#: mixer/templates/index_back.html:103
+msgid ""
+"You can send your coins to up to 5 addresses to increase your security even "
+"more."
+msgstr ""
+
+#: mixer/templates/index_back.html:111
+msgid "Fair Price"
+msgstr ""
+
+#: mixer/templates/index_back.html:115
+
+msgid ""
+"We offer our services for the low fee of %(service)s of your mix plus %(tr)s "
+"transaction fee per payout address."
+msgstr ""
+"우리는 두 가지 수수료가 있습니다, 지불금 주소 당 서비스 수수료 %(service)s% 및 거래 "
+"수수료 %(tr)s BTC."
+
+#: mixer/templates/index_back.html:123
+msgid "Secure"
+msgstr ""
+
+#: mixer/templates/index_back.html:124
+msgid ""
+"Your security and anonymity is our top priority. We make sure our servers "
+"are protected against every type of attack, so you can use our service with "
+"confidence."
+msgstr ""
+
+#: mixer/templates/mix_status.html:15
+msgid "Mix status:"
+msgstr "믹스 상태"
+
+#: mixer/templates/mix_status.html:49
+msgid "Your Mix ID:"
+msgstr ""
+
+#: mixer/templates/mix_status.html:50
+msgid ""
+"Save this number! This is the only identifier of your mix and you will use "
+"it to check the status of this session."
+msgstr ""
+
+#: mixer/templates/mix_status.html:55
+msgid "Do not send less than %(mn)s BTC"
+msgstr "이것보다 적게 보내지 마라. %(mn)s BTC"
+
+#: mixer/templates/mix_status.html:58
+msgid "Do not send more than %(mx)s BTC"
+msgstr "이것보다 더 보내지 마라. %(mx)s BTC"
+
+#: mixer/templates/mix_status.html:65
+msgid "Certificate of origin"
+msgstr "원산지 증명서"
+
+#: mixer/templates/mix_status.html:66
+
+msgid ""
+"We issue a certificate of origin with every mix that guarantees the coins "
+"you receive came from Anonymix"
+msgstr ""
+"우리는 Anonymix로부터받는 모서리를 보장하는 모든 조합으로 원산지 증명서를 발"
+"급합니다"
+
+#: mixer/templates/mix_status.html:81
+msgid "Deposit address:"
+msgstr "보증금 주소"
+
+#: mixer/templates/mix_status.html:91
+
+msgid ""
+"This mix is valid for %(inact)s days. Send your coins to the deposit address "
+"within this time limit. Anonymix schedules the payment of your mixed coins "
+"once your deposit has %(confirmations)s\n"
+"                        confirmation. The arrival of your clean coins "
+"depends on your delay settings."
+msgstr ""
+"이 혼합은 유효 기간 %(inact)s 시간. Anonymix 당신의 혼합 된 동"
+"전 지불 (</code>%(confirmations)s </code>) 확인. 깨끗한 코너의 도착은 지연 설정"
+"에 따라 다릅니다."
+
+#: mixer/templates/mix_status.html:99
+msgid "Output address(es)"
+msgstr "다중 주소"
+
+#: mixer/templates/mix_status.html:100
+msgid "Percentages"
+msgstr "백분율"
+
+#: mixer/templates/mix_status.html:101
+msgid "Delay"
+msgstr "지연"
+
+#: mixer/templates/mix_status.html:115
+msgid "Your deposit payments"
+msgstr "예금 지불"
+
+#: mixer/templates/mix_status.html:118
+msgid "Your incoming transactions will be shown here."
+msgstr "들어오는 거래가 여기에 표시됩니다"
+
+#: mixer/templates/mix_status.html:123
+msgid "Amount"
+msgstr "금액 : 금액"
+
+#: mixer/templates/mix_status.html:123
+msgid "Confirmations"
+msgstr "확정"
+
+#: mixer/templates/mix_status.html:123 mixer/templates/mix_status.html:139
+msgid "Transaction ID(s)"
+msgstr "거래 ID"
+
+#: mixer/templates/mix_status.html:129
+msgid "Mixed payout transactions"
+msgstr "지불금 거래"
+
+#: mixer/templates/mix_status.html:132
+msgid ""
+"Your transaction has been sent to Anonymix admin for approval due to high "
+"volume. Please check back later."
+msgstr ""
+"대용량의 승인을 위해 거래가 Anonymix에 전송되었습니다. 나중에 다시 확인하십시"
+"오."
+
+#: mixer/templates/mix_status.html:135
+msgid "Mixed payout will be released after %(conf)s cofrimation."
+msgstr "혼합 지불금은 확정 된 확인 후에 %(conf)s  공개됩니다."
+
+#: mixer/templates/mix_status.html:139
+msgid "Amount Net:"
+msgstr "금액 순"
+
+#: mixer/templates/mix_status.html:139
+msgid "Delay:"
+msgstr "지연"
+
+#: mixer/templates/mix_status.html:149
+msgid " Delete"
+msgstr "삭제"
+
+#: mixer/templates/mix_status.html:152
+
+msgid ""
+"Click to delete all of your mix information from our servers.<br> Do not "
+"delete your mix information before you have receive your mixed bitcoin."
+msgstr ""
+"우리 서버에서 귀하의 모든 정보를 삭제하려면 클릭하십시오. 로 <br> 혼합 비"
+"트 코인을 받기 전에 정보를 삭제하지 마십시오</b>."
+
+#: mixer/templates/new_mix_3.html:58
+
+msgid ""
+"Please enter the address(es) you would like your mixed Bitcoins to be send "
+"to. For the fastest transaction, select 'Quick Mix' in the delay settings "
+"and you will receive mixed Bitcoins after one confirmation."
+msgstr ""
+"혼합 Bitcoin을 보내려는 주소를 입력하십시오. 가장 빠른 거래의 경우 지연에서  "
+"Quick Mix 을 선택하면 한 번 확인한 후에 혼합 된 모서리가 표시됩니다"
+
+#: mixer/templates/status.html:11
+
+msgid "Use your <b>Mix ID</b> to come back and check the status of your mix"
+msgstr ""
+"<b> 믹스 ID 코드 </ b>를 사용하여 돌아와서 믹스 상태를 확인하십시오"
+
+#~ msgid "English"
+#~ msgstr "Korean"
+
+#~ msgid "(:attribute) is not valid"
+#~ msgstr ":attribute 이 유효하지 않습니다."
+
+#~ msgid "Inactive -> older than 3 days"
+#~ msgstr "비활성 -> 3 일 이상 경과"
+
+#~ msgid "Awaiting Bitcoin"
+#~ msgstr "Bitcoin을 기다리는 중"
+
+#~ msgid "Bitcoins received, awaiting confirmations"
+#~ msgstr "Bitcoins 은 확인을 기다리고"
+
+#~ msgid "Mix in progress"
+#~ msgstr "믹스 진행 중"
+
+#~ msgid "Mix complete, sending bitcoin"
+#~ msgstr "비트 코인 전송 완료."
+
+#~ msgid "Mix ID Code"
+#~ msgstr "믹스 ID 코드"
+
+#~ msgid ""
+#~ "Save your mix ID code until your mix is complete. This code is the only "
+#~ "way to check the status of your mix."
+#~ msgstr ""
+#~ "믹스가 완료 될 때까지 믹스 ID 코드를 저장하십시오. 이 코드는 믹스의 상태"
+#~ "를 확인할 수있는 유일한 방법입니다."
+
+#~ msgid "Mix information"
+#~ msgstr "정보 혼합"
+
+#~ msgid "Minimum Payment"
+#~ msgstr "최소 결제"
+
+#~ msgid "Maximum payment"
+#~ msgstr "최대 지불금"
+
+#~ msgid "Payout address(es) | Percentages | Delay"
+#~ msgstr "지불금 주소 (들) | 백분율 | 지연"
+
+#~ msgid "hour(s)"
+#~ msgstr "시간 (들)"
+
+#~ msgid "minute(s)"
+#~ msgstr "분 (들)"
+
+#~ msgid "second(s)"
+#~ msgstr "제 (들)"
+
+#~ msgid "Service fee"
+#~ msgstr "서비스 요금"
+
+#~ msgid "Transaction fee per address"
+#~ msgstr "주소 당 거래 수수료"
+
+#~ msgid "Total transaction fee"
+#~ msgstr "총 거래 수수료"
+
+#~ msgid ""
+#~ "Warning! You have sent in (<b>) less than the required minimum (</b) of "
+#~ "(<b>:min-user-payment</b> <br>) To begin a mix, send enough to bring your "
+#~ "total payment to (:min-user-payment) BTC"
+#~ msgstr ""
+#~ "경고! (<b>:) 최소 사용자 지불 (</ b>) 중 (<b> min-user-payment< / b>) 총 "
+#~ "지불액  BTC 분 사용자 지불"
+
+#~ msgid ""
+#~ "Warning! You have sent in (<b>) over the maximum (</b>) allowed by "
+#~ "Anonymix! Anonymix only returns up to (<b>:max-user-payment-display</b>) "
+#~ "BTC"
+#~ msgstr ""
+#~ "경고! Anonymix가 허용 한 (<b>) 최대 (< b>)를 보냈습니다! Anonymix는 "
+#~ "(<b> : max-user-payment-display < / b>) BTC"
+
+#~ msgid "Your receiving address"
+#~ msgstr "귀하의 수신 주소"
+
+#~ msgid "Payment Scheduled"
+#~ msgstr "지불 예정"
+
+#~ msgid "Pending"
+#~ msgstr "보류"
+
+#~ msgid "Delete mix"
+#~ msgstr "믹스 삭제"
+
+#~ msgid "New Mix"
+#~ msgstr "새로운 믹스"
+
+#~ msgid "View Mix"
+#~ msgstr "믹스보기"
+
+#~ msgid "Copyright © :year Anonymix - All rights reserved."
+#~ msgstr "저작권 © : year Anonymix - 판권 소유."
+
+#~ msgid "Blog posts"
+#~ msgstr "블로그 게시물"
+
+#~ msgid "Newer"
+#~ msgstr "최신"
+
+#~ msgid "Older"
+#~ msgstr "이전"
+
+#~ msgid "Email"
+#~ msgstr "이메일"
+
+#~ msgid "Subject"
+#~ msgstr "제목"
+
+#~ msgid "Write your message here"
+#~ msgstr "여기에 메시지 쓰기"
+
+#~ msgid ""
+#~ "You have the option to delete your mix information immediately. If you "
+#~ "don't, we will keep your mix information for one week so we can assist "
+#~ "you if you have any questions. Keep in mind that once your mix "
+#~ "information is deleted we may not be able to provide user support, so we "
+#~ "urge you to wait until you have received your funds before deleting your "
+#~ "mix information."
+#~ msgstr ""
+#~ "믹스 정보를 즉시 삭제할 수 있습니다. 그렇지 않은 경우, 질문이있을 경우 도"
+#~ "움을 드릴 수 있도록 일주일 간 믹스를 유지할 것입니다. 귀하의 정보는 지원"
+#~ "을 제공하기에 충분하지 않으므로 귀하의 정보를 삭제하기 전에 금액을받을 때"
+#~ "까지 기다릴 수 있습니다."
+
+#~ msgid "Check the status of your mix"
+#~ msgstr "믹스의 상태 확인"
+
+#~ msgid "Go back"
+#~ msgstr "돌아 가기"
+
+#~ msgid "Address"
+#~ msgstr "주소"
+
+#~ msgid "Add address"
+#~ msgstr "주소 추가"
+
+#~ msgid "Remove address"
+#~ msgstr "주소 삭제"
+
+#~ msgid "Page Not Found"
+#~ msgstr "페이지를 찾을 수 없음"
+
+#~ msgid "Seems you're looking for something that doesn't exist."
+#~ msgstr "존재하지 않는 무언가를 찾고있는 것 같습니다."
+
+#~ msgid "Congratulations!"
+#~ msgstr "축하합니다!"
+
+#~ msgid "You are the winner of our raffle!"
+#~ msgstr "당신은 우리 추첨의 승자입니다!"
+
+#~ msgid "As a prize you received the following bonus: (...)%"
+#~ msgstr "상으로 다음 보너스를 받았습니다 : (...) %"

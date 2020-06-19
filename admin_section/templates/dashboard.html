@@ -1,0 +1,75 @@
+{% extends 'foot2.html' %}
+{% block content %}
+<header class="header text-white" style="background-image: url('/assets/img/background.jpg');">
+	<div class="overlay opacity-0" style="background-color: #ffffff"></div>
+	<div class="container text-center">
+		<h1 class="display-4 mb-6">
+		  <strong>Mixes</strong>
+		</h1>
+	</div>
+</header>
+{% load tool2 %}
+  <div class="page-wrapper">
+    <main class="main-content text-center">
+      <div class="section">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 ">
+                      <div class="submit-form">
+                        {% if message %}
+                              <div class="alert alert-success text-center" role="alert">
+                                  {{message}}
+                              </div>
+                          {% endif %}
+                          <div class="panel panel-default panel-smartmix text-center">
+
+                                  <table class="table table-condensed" id='dashboard'>
+                                      <tr>
+                                          <td><b>Number</b></td>
+                                          <td><b>Mix ID</b></td>
+                                          <td><b>Created at</b></td>
+                                         
+                                          <td><b>Amount</b></td>
+                                          <td><b>Link</b></td>
+                                          <td>
+                                      </tr>
+                                      {% for mix_cont in mixes %}
+                                      {% get_element 2 mix_cont as mix %}
+                                      {% get_element 0 mix_cont as number %}
+                                          <tr>
+                                              <td>{{number}}</td>
+                                              <td>{{mix.mix_id}}</td>
+                                              <td>{{mix.date}}</td>
+                                             
+                                              <td>{{mix.amount}} BTC</td>
+                                              <td>
+                                                  <a target="_blank" href="/check?idd={{mix.mix_id}}">
+                                                      View Mix
+                                                  </a>
+                                              </td>
+                                              <td>
+                                                <a href='/deletemix/{{mix.mix_id}}' class="btn-danger btn-sm" >Delete</a>
+                                              </td>
+                                          </tr>
+                                        {% endfor %}
+                                  </table>
+                                  <hr>
+
+                  <nav class="flexbox my-8">
+                      {% decrement counter as new %}
+                            <a class="btn btn-outline-secondary" href='/bitadm/panel?rank={{new}}'><i class="fas fa-long-arrow-alt-left mr-2" aria-hidden="true"></i> Newer</a>
+                    {% increment counter as old %}
+                            <a class="btn btn-outline-secondary" href='/bitadm/panel?rank={{old}}'>Older <i class="fas fa-long-arrow-alt-right ml-2" aria-hidden="true"></i></a>
+                        </nav>
+                            </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+{% endblock %}

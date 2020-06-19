@@ -1,0 +1,36 @@
+{% extends 'footer.html' %}
+{% block content %}
+{% load i18n %}
+{% get_current_language as lg %}
+<div class="page-wrapper">
+	<header>
+			<img src="/assets/img/AMbackground_original.jpg" class="banner-image">
+	</header>
+
+		  <section class="text-center py-5">
+			  <div class="container">
+					<header class="section-header">
+						<h1 class="display-4 mb-6">
+						  <strong>{% trans "Delete Mix" %}</strong>
+						</h1>
+					</header>
+				  <h3 class="display-4">{% trans "Delete your mix?" %}</h3>
+				  <p class="lead">{% trans "This cannot be undone" %}</p>
+				  <br>
+				<div class='row'>
+					<div class='col-sm-6'>
+				  <button class="btn btn-secondary w-150 float-right" type="button"> <a href="/{{lg}}/check?idd={{idd}}">Go back </a></button></div>
+				  <div class='col-sm-6'>
+					<form action='' method='POST'>
+						{% csrf_token %}
+						<input name='lang' hidden value='{{lg}}'>
+						<input hidden name='idd' value='{{idd}}'>
+				  <button class="btn btn-danger w-150 float-left" type="submit">{% trans "Delete" %}</button>
+				  </form>
+				</div>
+				</div>
+
+			  </div>
+		  </section>
+
+{% endblock %}

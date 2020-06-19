@@ -1,0 +1,33 @@
+{% extends 'footer.html' %} {% block content %} {% load i18n %} {% get_current_language as lg %}
+<header>
+    <img src="/assets/img/AMbackground_original.jpg" class="banner-image">
+</header>
+<div class="page-wrapper">
+    <section class="py-5">
+        <div class="container">
+            <header class="section-header">
+                <h1 class="display-4 mb-6 text-center"><strong>{% trans "Mix Info" %}</strong></h1>
+                <hr>
+                <p class="lead">{% trans "Use your <b>Mix ID</b> to come back and check the status of your mix" %}</p>
+            </header>
+            <div class="row">
+                <div class="col-md-6 col-lg-6  offset-md-3 offset-lg-3">
+                    <form action="/{{lg}}/check">
+                        {% if message %}
+                        <div class="col-12">
+                            <div class="alert alert-danger text-center">{{message}}</div>
+                        </div>
+                        {% endif %}
+                        <div class="form-group col-sm-12">
+                            <input name='idd' placeholder='{% trans "Your Mix ID" %}' size="64" required="" class="form-control form-control-lg text-center input-rounded" type="text">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-xl btn-info btn-round" type="submit">{% trans "Mix Info" %}</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}

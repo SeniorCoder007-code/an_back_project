@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    {% load i18n %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="{{meta.description}}">
+    <meta name="keywords" content="{{meta.keywords}}">
+
+    <title>{{meta.title}}</title>
+
+
+		<link rel="canonical" href="{{meta.cronical}}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon.png">
+    <link rel="shortcut icon" href="/assets/img/favicon.png">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="">
+
+    <meta name="theme-color" content="#ffffff">
+    <link href="/assets/css/app.css" rel="stylesheet">
+	<link href="/assets/fonts/font.css" rel="stylesheet">
+
+
+</head>
+ {% get_current_language as lg %}
+{% load tool %}
+
+<body>
+    {% if s.banner_show %}
+    <div class="d-flex justify-content-center banner bd-block" style="background: {{s.banner_color}}; color: white;">
+        <p><strong> {{s.bold}} </strong> {{s.banner_text}} </p>
+    </div>
+    {% endif %}
+    <nav class="navbar navbar-light bg-faded d-block d-lg-none">
+        <input type="checkbox" id="navbar-toggle-cbox">
+        <label for="navbar-toggle-cbox" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+      &#9776;
+    </label>
+        <div class="collapse navbar-toggleable-xs" id="navbar-header">
+            <div class="container">
+                <div class="row">
+                    <section class="col-12 navbar-mobile">
+                        <nav class="nav nav-navbar mx-auto">
+                            <a class="nav-link" href="/{{lg}}/">{% trans "Home" %}</a>
+                            <a class="nav-link" href="/{{lg}}/#whymix">{% trans "Why Anonymix?" %}</a>
+                            <a class="nav-link" href="/{{lg}}/#features">{% trans "Features" %}</a>
+                            <!-- <a class="nav-link" href="/{{lg}}/key">{% trans "Key" %}</a>-->
+                            <a class="nav-link" href="/{{lg}}/faq">{% trans "FAQ" %}</a>
+                            <a class="nav-link" href="/{{lg}}/blog">{% trans "Blog" %}</a>
+                            <a class="nav-link" href="/{{lg}}/contact">{% trans "Contact" %}</a>
+                            <a class="nav-link" href="/{{lg}}/newmix">{% trans "Begin Mix" %}</a>
+                            <a class="nav-link" href="/{{lg}}/status">{% trans "Mix Info" %}</a> {% if lg == 'en' %}
+                            <a class="nav-link  active " href="/en"><img class='flag' src="/assets/img/lang/en.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/en"><img class='flag' src="/assets/img/lang/en.png"></a>
+                            {% endif %} {% if lg == 'de' %}
+                            <a class="nav-link  active " href="/de"><img class='flag' src="/assets/img/lang/de.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/de"><img class='flag' src="/assets/img/lang/de.png"></a>
+                            {% endif %} {% if lg == 'es' %}
+                            <a class="nav-link  active " href="/es"><img class='flag' src="/assets/img/lang/es.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/es"><img class='flag' src="/assets/img/lang/es.png"></a>
+                            {% endif %} {% if lg == 'fr' %}
+                            <a class="nav-link  active " href="/fr"><img class='flag' src="/assets/img/lang/fr.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/fr"><img class='flag' src="/assets/img/lang/fr.png"></a>
+                            {% endif %}
+                            {% if lg == 'ko' %}
+                            <a class="nav-link  active " href="/ko"><img class='flag' src="/assets/img/lang/kor.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/ko"><img class='flag' src="/assets/img/lang/kor.png"></a>
+                            {% endif %}
+                            {% if lg == 'pl' %}
+                            <a class="nav-link  active " href="/pl"><img class='flag' src="/assets/img/lang/pol.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/pl"><img class='flag' src="/assets/img/lang/pol.png"></a>
+                            {% endif %}
+                        </nav>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-left col-lg-2">
+                    <a class="navbar-brand" href="/">
+                        <img class="logo-dark" src="/assets/img/logo/logow_text.png" alt="logo">
+                        <img class="logo-light" src="/assets/img/logo/logow_text.png" alt="logo">
+                    </a>
+                </div>
+
+                <section class="col-lg-9">
+                    <ul class="nav nav-navbar mx-auto nav-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/#whymix">{% trans "Why Anonymix?" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/#features">{% trans "Features" %}</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                          <a class="nav-link" href="/{{lg}}/key">{% trans "Key" %}</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/faq">{% trans "FAQ" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/blog">{% trans "Blog" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/contact">{% trans "Contact" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/newmix">{% trans "Begin Mix" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/{{lg}}/status">{% trans "Mix Info" %}</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <div class="text-right col-lg-1 cancel">
+                    <ul class="nav nav-navbar d-inline-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lang <span class="arrow"></span></a>
+                            <nav class="nav align-right language-selector text-center">
+                                {% if lg == 'en' %}
+                                <a class="nav-link  active " href="/en"><img class='flag' src="/assets/img/lang/en.png"></a>
+                                {% else %}
+                                <a class="nav-link" href="/en"><img class='flag' src="/assets/img/lang/en.png"></a>
+                                {% endif %} {% if lg == 'de' %}
+                                <a class="nav-link  active " href="/de"><img class='flag' src="/assets/img/lang/de.png"></a>
+                                {% else %}
+                                <a class="nav-link" href="/de"><img class='flag' src="/assets/img/lang/de.png"></a>
+                                {% endif %} {% if lg == 'es' %}
+                                <a class="nav-link  active " href="/es"><img class='flag' src="/assets/img/lang/es.png"></a>
+                                {% else %}
+                                <a class="nav-link" href="/es"><img class='flag' src="/assets/img/lang/es.png"></a>
+                                {% endif %} {% if lg == 'fr' %}
+                                <a class="nav-link  active " href="/fr"><img class='flag' src="/assets/img/lang/fr.png"></a>
+                                {% else %}
+                                <a class="nav-link" href="/fr"><img class='flag' src="/assets/img/lang/fr.png"></a>
+                                {% endif %}
+                                {% if lg == 'ko' %}
+                            <a class="nav-link  active " href="/ko"><img class='flag' src="/assets/img/lang/kor.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/ko"><img class='flag' src="/assets/img/lang/kor.png"></a>
+                            {% endif %}
+                            {% if lg == 'pl' %}
+                            <a class="nav-link  active " href="/pl"><img class='flag' src="/assets/img/lang/pol.png"></a>
+                            {% else %}
+                            <a class="nav-link" href="/pl"><img class='flag' src="/assets/img/lang/pol.png"></a>
+                            {% endif %}
+
+
+                            </nav>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    {% block content %} {% endblock %}
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 mx-auto">
+                    <div class="nav nav-bold nav-uppercase nav-center">
+                        <a class="nav-link" href="/{{lg}}/#whymix">{% trans "Why Anonymix?" %}</a>
+                        <a class="nav-link" href="/{{lg}}/#features">{% trans "Features" %}</a>
+                        <a class="nav-link" href="/{{lg}}/faq">{% trans "FAQ" %}</a>
+                        <a class="nav-link" href="/{{lg}}/blog">{% trans "Blog" %}</a>
+                        <a class="nav-link" href="/{{lg}}/contact">{% trans "Contact" %}</a>
+                        <a class="nav-link" href="/{{lg}}/newmix">{% trans "Begin Mix" %}</a>
+                        <a class="nav-link" href="/{{lg}}/status">{% trans "Mix Info" %}</a>
+                    </div>
+                    <hr>
+                    <div class="nav  nav-uppercase nav-center">
+                        <span class="nav-link text-center">tor: <a href="http://{{s.site}}">{{s.site}}</a></span>
+												{% get_elems s.mirror as mirrors %}
+												{% get_count mirrors as count %}
+												{% if count != 1 %}
+												{% define 1 as counter %} {% for mirr in mirrors  %}
+                        <span class="nav-link text-center ">{% if counter == 1 %} mirror site: {% else %} mirror site {{counter}}:{% endif %} <a href='https://{{mirr}}'>{{mirr}}</a></span>
+												{% increment counter as counter %}{% endfor %}
+												{% else %}
+												{% define 1 as counter %} {% for mirr in mirrors  %}
+												<span class="nav-link text-center ">mirror site: <a href='https://{{mirr}}'>{{mirr}}</a></span>{% increment counter as counter %}{% endfor %}
+												{% endif %}
+                        <span class=" nav-link text-center ">clearnet: <a href="https://anonymix.io/">anonymix.io</a></span>
+                    </div>
+                    <div class="nav  nav-uppercase nav-center">
+                        {% get_year as yr %}
+                        <span class="nav-link text-center ">Copyright ©{{yr}}  Anonymix - All rights reserved.</span>
+                        <span class="nav-link text-center "> {% trans "Donations" %}: {{s.donation}}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+{% extends 'footer.html' %} {% block content %}{% load i18n %} {% get_current_language as lg %}
+<header>
+    <img src="/assets/img/AMbackground_original.jpg" class="banner-image">
+</header>
+{% load tool %}
+<div class="page-wrapper">
+    <section class="py-5">
+        <div class="container">
+            <header class="section-header">
+                <h1 class="display-4 mb-6">
+                    <strong>{% trans "Frequently Asked Questions" %}</strong>
+                </h1>
+            </header>
+            <div class="row gap-y">
+                <div class="col-md-12">
+                    <h5>{% trans "When should I use a bitcoin mixer?" %}</h5>
+                    <p>{% trans "Use a mixer whenever you have bitcoins that could be connected to your identity or a transaction you don't want to be associated with. Realistically, this means any bitcoins you receive from someone else, since you don't know what they've been up to." %}
+                    </p>
+                </div>
+
+
+                <div class="col-md-12">
+                    <h5>{% trans "How does it work?" %}</h5>
+                    <p>{% trans "Anonymix is a tool to give you back control over your online anonymity. When you send us your bitcoins, we'll send you new ones to the wallet of your choice-- or even to several wallets. This ends the trail of any old wallets and coins, which may be associated with your identity and past transactions. Get a clean start on the blockchain by sending your mixed coins to a new wallet." %}
+                    </p>
+                </div>
+
+
+                <div class="col-md-12">
+                    <h5>{% trans "What are your fees?" %}</h5>
+                    {% render_dec s.t_fee as fee %} {% render_dec s.s_fee as sfee %}
+                    <p>{% blocktrans with ss=sfee tr=fee %}We have two fees, a service fee and a transaction fee. The service fee is  {{ss}}% and the
+                            transaction fee is {{tr}} BTC per payout address.{% endblocktrans %}</p>
+                </div>
+
+
+                <div class="col-md-12">
+                    <h5>{% trans "How long does the mixing process take?" %}</h5>
+                    {% render_dec s.min_usr_pay as min %}
+                    <p>{% blocktrans %}That depends on the settings you choose at the beginning of your mix. If you want your coins back quickly, choose 'Quick Mix' and receive clean coins after one confirmation. For extra anonymity, choose one of the delay
+                        options. The timer to release your coins will start after the transaction has 1 confirmation.{% endblocktrans %}</p>
+                </div>
+
+
+                <div class="col-md-12">
+                    <h5>{% trans "Does Anonymix keep logs?" %}</h5>
+                    <p>{% trans "At Anonymix, you have the option to delete all records of your mix right away. If you don't choose to delete your mix from our records right away, we keep logs for seven days to provide customer support. After seven days all logs are deleted automatically. Please note that if you have deleted your mix our User Support team may be unable to assist you, so we highly recommend waiting until your mix has arrived at your receiving address before deleting it." %}
+                    </p>
+                </div>
+
+
+                <div class="col-md-12">
+                    <h5>{% trans "What happens if something goes wrong?" %}</h5>
+                    <p>{% trans "If there's a problem with your mix or you think something isn't working the way it should, please use our support page to get in touch with the Anonymix user support. Our team is committed to making sure you have a top-notch experience with our service." %}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    {% endblock %}

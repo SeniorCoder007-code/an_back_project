@@ -1,0 +1,396 @@
+{% extends 'foot2.html' %}
+{% block content %}
+{% load tool2 %}
+<header class="header text-white" style="background-image: url(/assets/img/background.jpg);">
+	<div class="container text-center">
+		<h1 class="display-4 mb-6"><strong>Settings</strong></h1>
+	</div>
+</header>
+
+  <div class="page-wrapper">
+    <main class="main-content text-center py-8">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="col-md-12">
+                  			{% if error %}
+                          <div class="alert alert-danger text-center mt-5">
+                               {{error}}
+                          </div>
+                          {% endif %}
+                          {% if message %}
+
+                          <div class="alert alert-success text-center mt-5" role="alert">
+                               {{message}}
+                          </div>
+                          {% endif %}
+
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="submit-form pt-5 pb-10">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="card text-center">
+                                  <div class="card-header">General settings</div>
+                                  <form method='post' action='/bitadm/change'> {% csrf_token %}
+                                  <div class="card-body">
+
+                                      <div class="form-group">
+                                          <label for="exampleInputEmail1">Email address</label>
+                                          <input type="email" name='supp_mail' value='{{s.support_mail}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                            <label for="exampleInputEmail1">Donation address</label>
+                                            <input type="text" name='donation' value='{{s.donation}}' class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Tor Site</label>
+                                            <input type="text" name='site' value='{{s.site}}' class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Mirror Site (enter them seperated by ',')</label>
+                                            <input type="text" name='mirror' value='{{s.mirror}}' class="form-control"/>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="min_payment">Shuffle Lucky Number</label>
+                                                {% render_int s.shuffle_num as lnum %}
+                                                <input type="text" name='shuffle_num' value='{{lnum}}' class="form-control"/>
+                                            </div>
+
+                                            <div class="form-group">
+                                                    <label for="min_payment">Shuffle Percentage</label>
+                                                    {% get_percentage s.shuffle_perc as perc %}
+                                                    <input type="text" name='shuffle_perc' value='{{perc}}' class="form-control"/>
+                                                </div>
+
+
+                                      <div class="form-group">
+                                          <label for="min_payment">Minimum user payment</label>
+                                          {% render_dec s.min_usr_pay as min %}
+                                          <input type="text" name='min_usr_pay' value='{{min}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="max_payment">Maximum user payment</label>
+                                          {% render_dec s.max_usr_pay as maxpay %}
+                                          <input type="text" name='max_usr_pay' value='{{maxpay}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="max_payment_display">Maximum user payment - display</label>
+                                          {% render_dec s.max_usr_disp_pay as maxdisp %}
+                                          <input type="text"  name='max_usr_disp_pay' value='{{maxdisp}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="service_fee">Service fee ( % )</label>
+                                          {% render_dec s.s_fee as sfee %}
+                                          <input type="text" name='s_fee' value='{{sfee}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="transaction_fee">Transaction fee per address ( BTC ) - increases per
+                                              address</label>
+                                              {% render_dec s.t_fee as tfee %}
+                                          <input type="text" name='t_fee' value='{{tfee}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="transaction_fee">Days until account inactive</label>
+                                          {% render_int s.d_inactive as inact %}
+                                          <input type="text" name='d_inactive' value='{{inact}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="transaction_fee">Days until account deleted</label>
+                                          {% render_int s.d_deleted  as delet %}
+                                          <input type="text" name='d_deleted' value='{{delet}}' class="form-control"/>
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="submit"  class="btn btn-primary" value="Save"/>
+                                      </div>
+                                  </form>
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="card text-center">
+                                  <div class="card-header">Banner settings</div>
+                                  <form method='post' action='/bitadm/change'> {% csrf_token %}
+                                  <div class="card-body">
+                                      <div class="form-group">
+                                          <label for="show_banner">Show banner</label>
+                                          <select class="form-control" name="show">
+                                              {% if s.banner_show %}
+                                            <option value="1" selected>Yes</option>
+                                            <option value="0" >No</option>
+                                            {% else %}
+                                            <option value="1">Yes</option>
+                                            <option value="0" selected>No</option>
+                                            {% endif %}
+
+                                          </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="banner_colour">Banner Colour</label>
+                                          <select class="form-control" name="color">
+                                              {% if s.banner_color == 'green' %}
+                                            <option value="green" selected>Green</option>
+                                            <option value="red" >Red</option>
+                                            {% else %}
+                                            <option value="green">Green</option>
+                                            <option value="red" selected>Red</option>
+                                            {% endif %}
+
+                                          </select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="banner_text_bold">Banner text in bold -- [ Must be surrounded by double
+                                              quotes ]</label>
+                                          <input type="text" class="form-control" value='{{s.bold}}' name='btext'/>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="banner_text"  name='text'>Banner text -- [ Must be surrounded by double quotes
+                                              ]</label>
+                                          <input type="text" class="form-control" value='{{s.banner_text}}' name='text' />
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="submit" class="btn btn-primary" value="Save"/>
+                                      </div>
+
+                                  </div>
+                                  </form>
+                              </div>
+                              <div class="card text-center mt-5">
+                                  <div class="card-header">Service links</div>
+                                  <div class="card-body">
+                                      <a class="btn btn-primary" href="" target="_blank">Service</a>
+                                      <a class="btn btn-primary" href="" target="_blank">Unlock unspent</a>
+                                  </div>
+                              </div>
+                              <div class="card text-center mt-5">
+                                    <div class="card-header">View Protection</div>
+                                    <form method='post' action='/bitadm/change'> {% csrf_token %}
+                                    <div class="card-body">
+                                      <label for="banner_colour">Switch View Protection</label>
+                                      <select class="browser-default custom-select" name='protection'  id="inputGroupSelect04">
+                                          {% if s.protection %}
+                                        <option value="1" selected>On</option>
+                                        <option value="0" >Off</option>
+                                        {% else %}
+                                        <option value="1">On</option>
+                                        <option value="0" selected>Off</option>
+                                        {% endif %}
+                                      </select>
+                                    </div>
+
+                                    <div class="card-footer">
+                                      <button type='submit' class="btn btn-primary" >Save</button>
+                                    </div>
+                                    </form>
+                                </div>
+                          </div>
+                      </div>
+
+					  <div class="row mt-5">
+						<div class="col-12">
+						  <h2 class="text-center my-5">Meta Tags</h2>
+						</div>
+					  </div>
+
+					  <div class="row">
+						<div class="col-md-6">
+								<form method='post' action='/bitadm/change'> {% csrf_token %}
+
+						  <div class="card text-center">
+							<div class="card-header">Homepage</div>
+							<div class="card-body">
+									<input required hidden name='page' value='0'>
+								{% get_meta 0  as meta %}
+							  <div class="form-group">
+								<label for="banner_colour">Title</label>
+								<input required type="text" name='title' value='{{meta.title}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Keywords (Add more than 1 keywords in comma separated)</label>
+								<input required type="text" name='keywords' value='{{meta.keywords}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Canonical URL</label>
+								<input required type="text" name='cronical' value='{{meta.cronical}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Description</label>
+								<textarea name='description' class="form-control">{{meta.description}}</textarea>
+							  </div>
+							</div>
+							<div class="card-footer">
+							  <button class="btn btn-primary" type='submit'>Save</button>
+							</div>
+						  </div>
+						  </form>
+						</div>
+						<div class="col-md-6">
+								<form method='post' action='/bitadm/change'> {% csrf_token %}
+						  <div class="card text-center">
+							<div class="card-header">Start Session</div>
+							<div class="card-body">
+									<input required hidden name='page' value='1'>
+								{% get_meta 1  as meta %}
+							  <div class="form-group">
+								<label for="banner_colour">Title</label>
+								<input required type="text" name='title' value='{{meta.title}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Keywords (Add more than 1 keywords in comma separated)</label>
+								<input required type="text" name='keywords' value='{{meta.keywords}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Canonical URL</label>
+								<input required type="text" name='cronical' value='{{meta.cronical}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Description</label>
+								<textarea name='description' class="form-control">{{meta.description}}</textarea>
+							  </div>
+							</div>
+							<div class="card-footer">
+									<button class="btn btn-primary" type='submit'>Save</button>
+							</div>
+						  </div>
+						  </form>
+						</div>
+
+					  </div>
+
+					  <div class="row mt-5">
+						<div class="col-md-6">
+								<form method='post' action='/bitadm/change'> {% csrf_token %}
+						  <div class="card text-center">
+							<div class="card-header">Check Session</div>
+							<div class="card-body">
+									<input required hidden name='page' value='2'>
+								{% get_meta 2 as meta %}
+							  <div class="form-group">
+								<label for="banner_colour">Title</label>
+								<input required type="text" name='title' value='{{meta.title}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Keywords (Add more than 1 keywords in comma separated)</label>
+								<input required type="text" name='keywords' value='{{meta.keywords}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Canonical URL</label>
+								<input required type="text" name='cronical' value='{{meta.cronical}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Description</label>
+								<textarea name='description' class="form-control">{{meta.description}}</textarea>
+							  </div>
+							</div>
+							<div class="card-footer">
+									<button class="btn btn-primary" type='submit'>Save</button>
+							</div>
+							</form>
+						  </div>
+						</div>
+						<div class="col-md-6">
+								<form method='post' action='/bitadm/change'> {% csrf_token %}
+						  <div class="card text-center">
+							<div class="card-header">FAQ</div>
+							<div class="card-body">
+									<input required hidden name='page' value='3'>
+								{% get_meta 3  as meta %}
+							  <div class="form-group">
+								<label for="banner_colour">Title</label>
+								<input required type="text" name='title' value='{{meta.title}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Keywords (Add more than 1 keywords in comma separated)</label>
+								<input required type="text" name='keywords' value='{{meta.keywords}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Canonical URL</label>
+								<input required type="text" name='cronical' value='{{meta.cronical}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Description</label>
+								<textarea name='description' class="form-control">{{meta.description}}</textarea>
+							  </div>
+							</div>
+							<div class="card-footer">
+									<button class="btn btn-primary" type='submit'>Save</button>
+							</div>
+						  </div>
+						  </form>
+						</div>
+					  </div>
+
+					  <div class="row mt-5">
+						<div class="col-md-6">
+								<form method='post' action='/bitadm/change'> {% csrf_token %}
+						  <div class="card text-center">
+							<div class="card-header">Blog</div>
+							<div class="card-body">
+									<input required hidden name='page' value='4'>
+								{% get_meta 4  as meta %}
+							  <div class="form-group">
+								<label for="banner_colour">Title</label>
+								<input required type="text" name='title' value='{{meta.title}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Keywords (Add more than 1 keywords in comma separated)</label>
+								<input required type="text" name='keywords' value='{{meta.keywords}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Canonical URL</label>
+								<input required type="text" name='cronical' value='{{meta.cronical}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Description</label>
+								<textarea name='description' class="form-control">{{meta.description}}</textarea>
+							  </div>
+							</div>
+							<div class="card-footer">
+									<button class="btn btn-primary" type='submit'>Save</button>
+							</div>
+							</form>
+						  </div>
+						</div>
+						<div class="col-md-6">
+								<form method='post' action='/bitadm/change'> {% csrf_token %}
+						  <div class="card text-center">
+							<div class="card-header">Support</div>
+							<div class="card-body">
+									<input required hidden name='page' value='5'>
+								{% get_meta 5  as meta %}
+							  <div class="form-group">
+								<label for="banner_colour">Title</label>
+								<input required type="text" name='title' value='{{meta.title}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Keywords (Add more than 1 keywords in comma separated)</label>
+								<input required type="text" name='keywords' value='{{meta.keywords}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Canonical URL</label>
+								<input required type="text" name='cronical' value='{{meta.cronical}}' class="form-control"/>
+							  </div>
+							  <div class="form-group">
+								<label for="banner_colour">Description</label>
+								<textarea name='description' class="form-control">{{meta.description}}</textarea>
+							  </div>
+							</div>
+							<div class="card-footer">
+									<button class="btn btn-primary" type='submit'>Save</button>
+							</div>
+						  </div>
+						  </form>
+						</div>
+					  </div>
+
+				  </div>
+			  </div>
+		  </div>
+	  </div>
+	</main>
+  </div>
+</body>
+</html>
+{% endblock %}

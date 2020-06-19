@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Login - Admin</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/logo/bootstrap.png?v=8j2885sjw40e">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/logo/bootstrap.png?v=8j8285jws40e">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/logo/bootstrap.png?v=8j8285jws40e">
+    <link rel="shortcut icon" href="/assets/img/logo/bootstrap.png?v=8j2885sjw40e">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="SIzUauFL4PJCktNc6FIgxrjRjoq3TiIXdXQZbahe">
+
+    <meta name="theme-color" content="#ffffff">
+    <!-- Styles -->
+    <link href="/assets/css/app.css" rel="stylesheet">
+    <link href="/assets/js/app.js" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-faded d-block d-lg-none">
+      <input type="checkbox" id="navbar-toggle-cbox">
+      <label for="navbar-toggle-cbox" class="navbar-toggler hidden-sm-up" data-toggle="collapse"
+             data-target="#navbar-header" aria-controls="navbar-header">
+          &#9776;
+      </label>
+      <div class="collapse navbar-toggleable-xs" id="navbar-header">
+          <div class="container">
+              <div class="row">
+                  <section class="col-12 navbar-mobile">
+                      <nav class="nav nav-navbar mx-auto">
+                          <a class="nav-link" href="index.html">Home</a>
+                          <a class="nav-link" href="#whymix">Why Mix</a>
+                          <a class="nav-link" href="#features">Features</a>
+                          <a class="nav-link" href="faq.html">FAQ</a>
+                          <a class="nav-link" href="blog.html">Blog</a>
+                          <a class="nav-link" href="support.html">Support</a>
+                          <a class="nav-link" href="startmix.html">Start Session</a>
+                          <a class="nav-link" href="checkmix.html">Check Session</a>
+                      </nav>
+                  </section>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark d-none d-lg-block">
+      <div class="container">
+          <div class="row">
+              <div class="navbar-left col-lg-2">
+                  <a class="navbar-brand" href="">
+                      <img class="logo-dark" src="/assets/img/logo/logow_text.png" alt="logo">
+                      <img class="logo-light" src="/assets/img/logo/logow_text.png" alt="logo">
+                  </a>
+              </div>
+
+              <section class="col-lg-6">
+                  <nav class="nav nav-navbar mx-auto nav-center">
+                      <a class="nav-link" href="#whymix">Why Mix</a>
+                      <a class="nav-link" href="#features">Features</a>
+                      <a class="nav-link" href="faq.html">FAQ</a>
+                      <a class="nav-link" href="blog.html">Blog</a>
+                      <a class="nav-link" href="support.html">Support</a>
+                  </nav>
+              </section>
+
+              <div class="text-right col-lg-4">
+                  <a class="btn btn-sm btn-round btn-danger mb-1" href="startmix.html">Start Session</a>
+                  <a class="btn btn-sm btn-round btn-danger btn-outline-danger" href="checkmix.html">Check Session</a>
+              </div>
+
+          </div>
+      </div>
+  </nav>
+  <header class="header text-white" style="background-image: url(/assets/img/background.jpg);">
+      <div class="container text-center">
+          <h1 class="display-4 mb-6"><strong>Login</strong></h1>
+      </div>
+  </header>
+
+  <div class="container">
+	<div class="row">
+		<div class="col-6 offset-3 submit-form">
+			<div class="panel panel-default panel-smartmix" style="padding: 40px 0;">
+				<div class="panel-body" >
+					<form class="border border-light px-5 pt-5 pb-4" action="/bitadm/verify" method='post'>
+						{% csrf_token %}
+
+						<div class="form-group">
+							<label for="name" class="col-md-4 control-label">Username</label>
+
+							<div class="col-md-12">
+								<input id="name" type="text" class="form-control" name="username"
+									   value="" required autofocus>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="col-md-4 control-label">Password</label>
+
+							<div class="col-md-12">
+								<input id="password" type="password" class="form-control" name="password" required>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 col-md-offset-4">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="remember" checked> Remember Me
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-8 col-md-offset-4">
+								<button type="submit" class="btn btn-primary">
+									Login
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

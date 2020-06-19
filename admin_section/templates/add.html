@@ -1,0 +1,119 @@
+{% extends 'foot.html' %}
+{% block content %}
+<header class="header text-white" style="background-image: url(/assets/img/background.jpg);">
+	<div class="container text-center">
+		<h1 class="display-4 mb-6"><strong>New post</strong></h1>
+	</div>
+</header>
+
+  <div class="container">
+      <section class="section">
+
+          	<form method='post' action='/bitadm/addpost' enctype="multipart/form-data"> {% csrf_token %}
+              <div class="col-md-12 ">
+
+
+
+                  <div class="panel panel-default panel-smartmix">
+                      <div class="panel-body">
+
+                          <div class="form-group">
+                              <label for="banner_text_bold">Title</label>
+                              <input type="text" class="form-control text-center" name='title' placeholder="Enter Post Title Here">
+                          </div>
+                          <hr>
+                          <div class="custom-file">
+    					<input type="file" class="custom-file-input" name='myfile' id="inputGroupFile01">
+    					<label class="custom-file-label">Choose file</label>
+  				</div>
+
+                          </div>
+
+
+
+                          <hr>
+                          <div class="form-group">
+                              <label for="banner_text_bold">Text</label>
+                              <textarea id="summernote" name="description"></textarea>
+                          </div>
+                          <div class="my-3">
+                        <label>Meta Title</label>
+                        <input type="text" class="form-control mb-4" placeholder="Meta Title" name='metatitle'>
+                    </div>
+                    <div class="my-3">
+                        <label>Meta Description</label>
+                        <input type="text" class="form-control mb-4" placeholder="Meta Description" name='metadesc'>
+                    </div>
+                    <div class="my-3">
+                        <label>Meta Keyword</label>
+                        <input type="text" class="form-control mb-4" placeholder="Meta Keyword" name='metakey'>
+                    </div>
+                    <div class="my-3">
+                        <label>Canonical</label>
+                        <input type="text" class="form-control mb-4" placeholder="Canonical" name='cronical'>
+                    </div>
+
+                          <div class="form-group">
+                            <input type="submit" class="btn btn-primary" />
+                          </div>
+
+
+                      </div>
+
+                  </div>
+              </div>
+          </form>
+          </div>
+      </section>
+  </div>
+  <script src="/assets/js/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
+
+
+  <script type="text/javascript">
+
+  	$('#summernote').summernote({minHeight: 300});
+
+          // $('#summernote').summernote({
+          //     minHeight: 300,
+          //     focus: false,
+          //     airMode: false,
+          //     dialogsInBody: true,
+          //     dialogsFade: true,
+          //     disableDragAndDrop: false,
+          //     toolbar: [
+          //         ['font', ['bold', 'underline', 'clear']],
+          //         ['fontname', ['fontname']],
+          //         ['para', ['ul', 'ol', 'paragraph']],
+          //         ['table', ['table']],
+          //         ['insert', ['link']],
+          //         ['view', ['fullscreen', 'codeview']],
+          //     ],
+          //     popover: {
+          //         air: [
+          //             ['color', ['color']],
+          //             ['font', ['bold', 'underline', 'clear']]
+          //         ]
+          //     },
+          //     print: {
+          //         //'stylesheetUrl': 'url_of_stylesheet_for_printing'
+          //     }
+          // });
+    </script>
+    <script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+</body>
+</html>
+{% endblock %}
