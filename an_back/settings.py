@@ -100,8 +100,11 @@ WSGI_APPLICATION = 'an_back.wsgi.application'
 
 DATABASES = {
     'default':  {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'andb',
+        'USER':'anuser',
+        'PASSWORD':'anpassword',
+        'HOST':'localhost',
     }
 
 }
@@ -185,9 +188,9 @@ LOGGING = {
 
 STATIC_URL = '/assets/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'asset')
-STATICFILES_DIRS  = [
- os.path.join(BASE_DIR, 'assets')
-]
+#STATICFILES_DIRS  = [
+ #os.path.join(BASE_DIR, 'assets')
+#]
 
 
 

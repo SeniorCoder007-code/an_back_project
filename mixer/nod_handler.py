@@ -15,12 +15,12 @@ payload = {"jsonrpc": "1.0", "id":"curltest", "method": "", "params": [] }
 
 class Bitcoin:
 	def __init__(self):
-		#self.user = 'testuser'
-		#self.password = 'testpassword'
-		#self.url = 'http://{0}:{1}@127.0.0.1:8332/'.format(self.user,self.password)
-		self.user = 'exchanger'
-		self.password = 'exchangerpass'
-		self.url = 'http://{0}:{1}@23.254.176.26:8332/'.format(self.user,self.password)
+		self.user = 'testuser'
+		self.password = 'testpassword'
+		self.url = 'http://{0}:{1}@127.0.0.1:8332/'.format(self.user,self.password)
+		#self.user = 'exchanger'
+		#self.password = 'exchangerpass'
+		#self.url = 'http://{0}:{1}@23.254.176.26:8332/'.format(self.user,self.password)
 
 
 
