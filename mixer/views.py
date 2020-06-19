@@ -25,7 +25,7 @@ def check_valid(address,h):
 	return res
 
 def check_valid_call(request):
-	if request.method == 'post':
+	if request.method == 'POST':
 		passcall = request.POST.get('passcall',False)
 	else:
 		passcall = request.GET.get('passcall',False)
